@@ -45,7 +45,7 @@
         }
       },
       showModal() {
-        this.$store.commit('openCardModale', this.card);
+        this.$store.commit('openCardModale', { card: this.card });
       },
     },
   };

@@ -1,8 +1,9 @@
-export const openCardModale = (state, card) => {
-  state.cardModale = card;
+export const openCardModale = (state, payload) => {
+  state.cardModale = payload.card;
+  state.setFocus = payload.setFocus;
 };
 
-export const closeCardModale = (state) => {
+export const closeCardModale = state => {
   state.cardModale = null;
 };
 
