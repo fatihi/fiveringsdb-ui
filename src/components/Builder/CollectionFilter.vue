@@ -5,7 +5,8 @@
         v-model="queryString"
         class="form-control form-control-sm mr-1"
         placeholder="Card filter (e.g. x:sincerity or k:bushi)"
-        @keydown.enter="openFirstCard"
+        @keydown.enter="openCardAndFlushInput"
+        ref="collectionFilterInput"
       />
       <b-btn v-b-toggle.searchHelp variant="outline-secondary" size="sm">
         <span class="fa fa-info-circle"></span>
@@ -191,6 +192,13 @@ export default {
         id: sideId,
         name: this.$t(`side.${sideId}`)
       }));
+    },
+    setFocus() {
+      this.$refs.collectionFilterInput.focus();
+    },
+    openCardAndFlushInput() {
+      this.openFirstCard();
+      this.queryString = '';
     }
   },
   watch: {

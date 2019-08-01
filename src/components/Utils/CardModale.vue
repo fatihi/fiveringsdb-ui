@@ -80,6 +80,10 @@ export default {
   methods: {
     hide() {
       this.$store.commit("closeCardModale");
+      const setFocus = this.$store.getters.setFocus;
+      if (setFocus) {
+        setFocus();
+      }
     },
     goToCardPage() {
       this.$router.push({
