@@ -77,7 +77,7 @@
       roleOptions() {
         return stores.cards({ type: 'role' }).map(role => ({
           value: role.id,
-          text: role.name + (this.clanRoles.filter(card => card.id === role.id).length > 0 ? ' (Current Clan Role)' : ''),
+          text: role.name + (this.clanRoles.filter(roleCard => roleCard.primary_role.id === role.id || roleCard.secondary_role.id === role.id).length > 0 ? ' (Current Clan Role)' : ''),
         }));
       },
     },
