@@ -918,10 +918,10 @@
                         <li>
                             To play a character using the disguised keyword, you must choose a non-unique character you control of 
                             the appropriate <em>Trait</em> or clan affiliation as an additional cost to play the character. Reduce 
-                            the cost to play the disguised character by the printed cost of the chosen character, pay that cost and 
-							put the disguised into play, then move all attachments and tokens (fate, status, etc.) from the chosen 
-							character to the disguised character. Finally, discard the chosen character from play. Interrupts cannot 
-							be used to replace or prevent this discard.
+                            the cost to play the disguised character by the printed cost of the chosen character, pay that cost,
+                            the disguised character enters play, then move all attachments and tokens (fate, status, etc.) from the
+                            chosen character to the disguised character. Finally, discard the chosen character from play. 
+                            Interrupts cannot be used to replace or prevent this discard.
                         </li>
                         <li>
                             A character played using the disguised keyword cannot be played into a conflict unless the character 
@@ -4547,9 +4547,6 @@
               <a href="https://fiveringsdb.com/card/guest-of-honor" target="_blank">Guest of Honor</a> (Core Set, 51)
           </li>
           <li>
-              <a href="https://fiveringsdb.com/card/niten-master" target="_blank">Niten Master</a> (Core Set, 64)
-          </li>
-          <li>
               <a href="https://fiveringsdb.com/card/young-rumormonger" target="_blank">Young Rumormonger</a> (Core Set, 101)
           </li>
           <li>
@@ -4579,14 +4576,20 @@
 					<li>
 						  <a href="https://fiveringsdb.com/card/pathfinder-s-blade" target="_blank">Pathfinder's Blade</a> (Imperial Cycle, 31)
 					</li>
-          <li>
-              <a href="https://fiveringsdb.com/card/feast-or-famine" target="_blank">Feast or Famine</a> (Imperial Cycle, 41)
-          </li>
 					<li>
  						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Policy Debate</a> (Imperial Cycle, 40)
 					</li>
 					<li>
+ 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
+					</li>
+					<li>
+ 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
+					</li>
+          <li>
 						  <a href="https://fiveringsdb.com/card/a-fate-worse-than-death" target="_blank">A Fate Worse than Death</a> (Imperial Cycle, 98)
+					</li>
+					<li>
+ 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Miya Satoshi</a> (Imperial Cycle, 112)
 					</li>
           <li>
               <a href="https://fiveringsdb.com/card/isawa-tadaka" target="_blank">Isawa Tadaka</a> (Disciples of the Void, 10)
@@ -4596,6 +4599,12 @@
           </li>
           <li>
               <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Void Fist</a> (Elemental Cycle, 94)
+          </li>
+          <li>
+              <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Daidoji Uji</a> (Masters of the Court, 11)
+          </li>
+          <li>
+              <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
           </li>
 				</ul>
 				</section>
