@@ -4605,16 +4605,16 @@
  						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Policy Debate</a> (Imperial Cycle, 40)
 					</li>
 					<li>
- 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
+ 						  <a href="https://fiveringsdb.com/card/consumed-by-five-fires" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
 					</li>
 					<li>
- 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
+ 						  <a href="https://fiveringsdb.com/card/cunning-magistrate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
 					</li>
           <li>
 						  <a href="https://fiveringsdb.com/card/a-fate-worse-than-death" target="_blank">A Fate Worse than Death</a> (Imperial Cycle, 98)
 					</li>
 					<li>
- 						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Miya Satoshi</a> (Imperial Cycle, 112)
+ 						  <a href="https://fiveringsdb.com/card/miya-satoshi" target="_blank">Miya Satoshi</a> (Imperial Cycle, 112)
 					</li>
           <li>
               <a href="https://fiveringsdb.com/card/isawa-tadaka" target="_blank">Isawa Tadaka</a> (Disciples of the Void, 10)
@@ -4626,10 +4626,10 @@
               <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Void Fist</a> (Elemental Cycle, 94)
           </li>
           <li>
-              <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Daidoji Uji</a> (Masters of the Court, 11)
+              <a href="https://fiveringsdb.com/card/daidoji-uji" target="_blank">Daidoji Uji</a> (Masters of the Court, 11)
           </li>
           <li>
-              <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
+              <a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
           </li>
 				</ul>
 				</section>
