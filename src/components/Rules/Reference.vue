@@ -918,10 +918,10 @@
                         <li>
                             To play a character using the disguised keyword, you must choose a non-unique character you control of 
                             the appropriate <em>Trait</em> or clan affiliation as an additional cost to play the character. Reduce 
-                            the cost to play the disguised character by the printed cost of the chosen character, pay that cost and 
-							put the disguised into play, then move all attachments and tokens (fate, status, etc.) from the chosen 
-							character to the disguised character. Finally, discard the chosen character from play. Interrupts cannot 
-							be used to replace or prevent this discard.
+                            the cost to play the disguised character by the printed cost of the chosen character, pay that cost,
+                            the disguised character enters play, then move all attachments and tokens (fate, status, etc.) from the
+                            chosen character to the disguised character. Finally, discard the chosen character from play. 
+                            Interrupts cannot be used to replace or prevent this discard.
                         </li>
                         <li>
                             A character played using the disguised keyword cannot be played into a conflict unless the character 
@@ -3112,7 +3112,7 @@
                     </ul>
                 </article>
                 <article>
-                    <anchored-heading @heading="add" :level="2">Would</anchored-heading>
+                    <anchored-heading @heading="add" :level="2">The word "Would"</anchored-heading>
                     <p>
                         The word "would" is used to define the triggering condition of some interrupt abilities, and
                         establishes a higher priority for those abilities than interrupts to the same triggering
@@ -4413,29 +4413,13 @@
                     <br>
                     <i>(Replaces “<em>Reaction</em>: After this province is revealed...”)</i>
                 </p>
-                <h5>
-                    <a href="https://fiveringsdb.com/card/kaiu-inventor" target="_blank">Kaiu Inventor</a> (Imperial
-                    Cycle, 63)
+				        <h5>
+                    <a href="https://fiveringsdb.com/card/feast-or-famine" target="_blank">Feast or Famine</a> (Imperial Cycle, 41)
                 </h5>
-                <p>
-                    Should read: "...an additional time this round (or specified period)." <br> <i>(Changed "each" to
-                    "this")</i>
-                </p>
-                <h5>
-                    <a href="https://fiveringsdb.com/card/pit-trap" target="_blank">Pit Trap</a> (Imperial Cycle, 73)
-                </h5>
-                <p>
-                    Should read: "Attach to a character. Play only on an attacking character." <br> <i>(Replaces
-                    "Attach to an attacking character.")</i>
-                </p>
-                <h5>
-                    <a href="https://fiveringsdb.com/card/ride-them-down" target="_blank">Ride Them Down</a> (Imperial
-                    Cycle, 99)
-                </h5>
-                <p>
-                    Should read: "...set the base strength of the attacked province to 1 until the end of the conflict."
-                    <br> 
-                    <i>(Added "until the end of the conflict.")</i>
+				        <p>
+					          Should read: “...move 1 fate from that character to a character you control.”
+					          <br> 
+                    <i>(Replaces “move each fate from that character to a character you control with no fate.”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/isawa-tadaka" target="_blank">Isawa Tadaka</a> (Disciples of the
@@ -4449,38 +4433,79 @@
                     unless the <span class="icon icon-element-earth"></span> ring is in that player’s claimed ring pool.”)</i>
                 </p>
 				        <h5>
+                    <a href="https://fiveringsdb.com/card/hawk-tattoo" target="_blank">Hawk Tattoo</a> (Elemental Cycle, 75)
+                </h5>
+				        <p>
+					          Should read: "Attach to a character you control."
+					          <br> 
+                    <i>(Added "Attach to a character you control.")</i>
+                </p>
+                <anchored-heading @heading="add" :level="2">Reprint Changes</anchored-heading>
+                <p>
+                    The following errata clarifies the interaction between individual card text and the rules in this document, 
+                    based on the current card ability templating. These text changes will be reflected in any future printing 
+                    of the card, whether in reprints of existing product, promotional printings, and new printings in future
+                    products.
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/steward-of-law" target="_blank">Steward of Law</a> (Core, 139)
+                </h5>
+                <p>
+                    Should read: “...characters cannot receive dishonored status tokens.”</i>
+                    <br> <i>(Replaces “...characters cannot become dishonored.”)</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/kaiu-inventor" target="_blank">Kaiu Inventor</a> (Imperial
+                    Cycle, 63)
+                </h5>
+                <p>
+                    Should read: "...an additional time this round (or specified period)." 
+                    <br> <i>(Changed "each" to "this")</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/pit-trap" target="_blank">Pit Trap</a> (Imperial Cycle, 73)
+                </h5>
+                <p>
+                    Should read: "Attach to a character. Play only on an attacking character." 
+                    <br> <i>(Replaces "Attach to an attacking character.")</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/ride-them-down" target="_blank">Ride Them Down</a> (Imperial
+                    Cycle, 99)
+                </h5>
+                <p>
+                    Should read: "...set the base strength of the attacked province to 1 until the end of the conflict."
+                    <br> <i>(Added "until the end of the conflict.")</i>
+                </p>
+				        <h5>
                     <a href="https://fiveringsdb.com/card/kaito-kosori" target="_blank">Kaito Kosori</a> (Disciples of the Void, 18)
                 </h5>
                 <p>
                     Should read: "During each <span class="icon icon-element-air"></span> conflict, if you control at least 1 
                     participating character and if this character is in your home area and ready, it contributes its skill to your side."
-                    <br> 
-                    <i>(Added "and ready.")</i>
+                    <br> <i>(Added "and ready.")</i>
                 </p>
 				        <h5>
                     <a href="https://fiveringsdb.com/card/yogo-kikuyo" target="_blank">Yogo Kikuyo</a> (Disciples of the Void, 25)
                 </h5>
                 <p>
                     Should read: "When the effects of a <em>Spell</em> event your opponent plays during a conflict would initiate, 
-					put this character into play from your hand – cancel its effects."
-                    <br> 
-                    <i>(Added "from your hand.")</i>
+					          put this character into play from your hand – cancel its effects."
+                    <br> <i>(Added "from your hand.")</i>
                 </p>
 				        <h5>
                     <a href="https://fiveringsdb.com/card/oracle-of-stone" target="_blank">Oracle of Stone</a> (Elemental Cycle, 37)
                 </h5>
 				        <p>
 					          Should read: “Then, each player discards 2 cards from his or her hand.”
-					          <br> 
-                    <i>(Added “from his or her hand.”)</i>
+					          <br> <i>(Added “from his or her hand.”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/ikebana-artisan" target="_blank">Ikebana Artisan</a> (Elemental Cycle, 63)
                 </h5>
 				        <p>
 					          The text after the dash should read: “cancel that honor loss. Then, lose 1 fate. (Unlimited.)”
-					          <br> 
-                    <i>(Replaces “lose 1 fate instead. (Unlimited.)”)</i>
+					          <br> <i>(Replaces “lose 1 fate instead. (Unlimited.)”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/hidden-moon-dojo" target="_blank">Hidden Moon Dojo</a> (Elemental Cycle, 68)
@@ -4489,16 +4514,7 @@
 					          The title should be spelled Hidden Moon Dōjō.
                     <br> 
                     Should have the <b>Dōjō</b> trait.
-					          <br> 
-                    <i>(Updated the spelling of the title and trait.)</i>
-                </p>
-				        <h5>
-                    <a href="https://fiveringsdb.com/card/hawk-tattoo" target="_blank">Hawk Tattoo</a> (Elemental Cycle, 75)
-                </h5>
-				        <p>
-					          Should read: "Attach to a character you control."
-					          <br> 
-                    <i>(Added "Attach to a character you control.")</i>
+					          <br> <i>(Updated the spelling of the title and trait.)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/mantra-of-earth" target="_blank">Mantra of Earth</a> (Elemental Cycle, 116)
@@ -4516,6 +4532,15 @@
 					          Should read: “During a conflict in which this character is participating on your side alone”
 					          <br> 
                     <i>(Added “on your side”)</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/unmatched-expertise" target="_blank">Unmatched Expertise</a> 
+                    (Children of the Empire, 65)
+                </h5>
+				        <p>
+					          Should read: “Attached character cannot receive dishonored status tokens.”
+					          <br> 
+                    <i>(Replaces “Attached character cannot become dishonored.”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/stay-your-hand" target="_blank">Stay Your Hand</a> (Children of the Empire, 80)
@@ -4547,9 +4572,6 @@
               <a href="https://fiveringsdb.com/card/guest-of-honor" target="_blank">Guest of Honor</a> (Core Set, 51)
           </li>
           <li>
-              <a href="https://fiveringsdb.com/card/niten-master" target="_blank">Niten Master</a> (Core Set, 64)
-          </li>
-          <li>
               <a href="https://fiveringsdb.com/card/young-rumormonger" target="_blank">Young Rumormonger</a> (Core Set, 101)
           </li>
           <li>
@@ -4579,14 +4601,20 @@
 					<li>
 						  <a href="https://fiveringsdb.com/card/pathfinder-s-blade" target="_blank">Pathfinder's Blade</a> (Imperial Cycle, 31)
 					</li>
-          <li>
-              <a href="https://fiveringsdb.com/card/feast-or-famine" target="_blank">Feast or Famine</a> (Imperial Cycle, 41)
-          </li>
 					<li>
  						  <a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Policy Debate</a> (Imperial Cycle, 40)
 					</li>
 					<li>
+ 						  <a href="https://fiveringsdb.com/card/consumed-by-five-fires" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
+					</li>
+					<li>
+ 						  <a href="https://fiveringsdb.com/card/cunning-magistrate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
+					</li>
+          <li>
 						  <a href="https://fiveringsdb.com/card/a-fate-worse-than-death" target="_blank">A Fate Worse than Death</a> (Imperial Cycle, 98)
+					</li>
+					<li>
+ 						  <a href="https://fiveringsdb.com/card/miya-satoshi" target="_blank">Miya Satoshi</a> (Imperial Cycle, 112)
 					</li>
           <li>
               <a href="https://fiveringsdb.com/card/isawa-tadaka" target="_blank">Isawa Tadaka</a> (Disciples of the Void, 10)
@@ -4596,6 +4624,12 @@
           </li>
           <li>
               <a href="https://fiveringsdb.com/card/void-fist" target="_blank">Void Fist</a> (Elemental Cycle, 94)
+          </li>
+          <li>
+              <a href="https://fiveringsdb.com/card/daidoji-uji" target="_blank">Daidoji Uji</a> (Masters of the Court, 11)
+          </li>
+          <li>
+              <a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
           </li>
 				</ul>
 				</section>
