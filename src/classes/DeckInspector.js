@@ -116,7 +116,8 @@ class DeckInspector {
     const singleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length === 1);
     const multipleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length > 1);
 
-    let permutations = [singleElementProvinces.map(province => province.element[0])];
+    let permutations = [];
+    permutations.push(singleElementProvinces.map(province => province.element[0]));
 
     for (const province in multipleElementProvinces) {
       const newPermutations = [];
