@@ -8,6 +8,7 @@ class TypeIcons {
       province: 'map-marker',
       role: 'asterisk',
       stronghold: 'university',
+      treaty: 'gavel'
     };
   }
 
