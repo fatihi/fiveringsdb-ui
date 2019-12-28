@@ -1,6 +1,10 @@
 <template>
     <a :href="url" v-b-popover="popover" @mouseover="changePopover" @touchstart="touchDevice"
-       @click.prevent="showModal">{{ card.name }}</a>
+       @click.prevent="showModal">
+       <span>{{ card.name }}</span>
+      <span v-if="card.is_banned" class="fa fa-ban" style="color:red"></span>
+      <span v-if="card.is_restricted" class="fa fa-exclamation-triangle" style="color:orange"></span>
+    </a>
 </template>
 
 <script>
