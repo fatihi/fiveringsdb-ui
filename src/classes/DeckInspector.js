@@ -60,7 +60,8 @@ class DeckInspector {
       || this.checkRoleDeck()
       || this.checkProvinceDeck()
       || this.checkDynastyDeck()
-      || this.checkConflictDeck();
+      || this.checkConflictDeck()
+      || this.checkRestrictedAndBannedCards();
   }
 
   checkCardCopies() {
@@ -171,11 +172,6 @@ class DeckInspector {
       return 9;
     }
 
-    const characterCount = DeckInspector.count(DeckInspector.findSlotsBy(conflictDeck, 'type', 'character'));
-    if (characterCount > 10) {
-      return 12;
-    }
-
     if (this.clan) {
       let influencePool = this.getInfluencePool();
 
@@ -209,6 +205,18 @@ class DeckInspector {
       if (uniq(offclans.map(slot => slot.card.clan)).length > 1) {
         return 11;
       }
+    }
+
+    return 0;
+  }
+
+  checkRestrictedAndBannedCards() {
+    if (find(this.slots, slot => slot.card != null && slot.card.is_banned)) {
+      return 20;
+    }
+
+    if (this.slots.filter(slot => slot.card != null && slot.card.is_restricted).length > 1) {
+      return 21;
     }
 
     return 0;
