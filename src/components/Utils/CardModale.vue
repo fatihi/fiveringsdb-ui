@@ -12,7 +12,9 @@
         <utils-card-image :card="card"></utils-card-image>
       </div>
       <div class="col-12 col-md-8">
-        <cards-card :card="card" :allow-pack-selection="false"></cards-card>
+        <cards-card v-bind:card="card">
+          <utils-card-link :card="card"></utils-card-link>
+        </cards-card>
       </div>
     </div>
     <div v-if="card && editable" slot="modal-header" class="w-100 text-center">
@@ -27,6 +29,7 @@
 <script>
 import CardsCard from "@/components/Cards/Card";
 import UtilsCardImage from "@/components/Utils/CardImage";
+import UtilsCardLink from '@/components/Utils/CardLink';
 import QuantitySelector from "@/components/Builder/QuantitySelector";
 import * as types from "@/store/mutation-types";
 
@@ -34,6 +37,7 @@ export default {
   components: {
     CardsCard,
     UtilsCardImage,
+    UtilsCardLink,
     QuantitySelector
   },
   name: "utils-card-modale",
