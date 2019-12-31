@@ -300,7 +300,7 @@
       },
     },
     mounted() {
-      this.$store.commit('changeDocumentTitle', 'Rules Reference');
+      this.$store.commit('changeDocumentTitle', 'The Imperial Law');
       defer(this.scroll, this.$route.hash);
     },
   };

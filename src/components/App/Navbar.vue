@@ -54,11 +54,12 @@
                     >
                         Builder
                     </b-nav-item>
-                    <b-nav-item
-                            :to="{name:'rules-reference'}"
-                    >
-                        Rules
-                    </b-nav-item>
+                    
+                    <b-nav-item-dropdown text="Rules">
+                      <b-dropdown-item :to="{name:'rules-reference'}" exact>Rules Reference Guide</b-dropdown-item>
+                      <b-dropdown-item :to="{name:'imperial-law'}" exact>The Imperial Law (Restricted and Ban List)</b-dropdown-item>
+                      <b-dropdown-item :to="{name:'multiplayer-rules'}" exact>Multiplayer Rules</b-dropdown-item>
+                    </b-nav-item-dropdown>
 
                     <li class="nav-item col-sm">
                         <form v-on:submit.prevent="search" class="d-inline">
