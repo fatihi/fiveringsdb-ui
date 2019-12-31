@@ -12,9 +12,13 @@
         </div>
         <div class="contents order-sm-1 col-sm-8 mt-3">
             <h2>MULTIPLAYER RULES</h2>
-            <p>
-                Coming Soon!
-            </p>
+            <hr>
+            <section>
+                <anchored-heading @heading="add" :level="1">Coming Soon</anchored-heading>
+                <p>
+
+                </p>
+            </section>
         </div>
     </div>
 </template>
