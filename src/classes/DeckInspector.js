@@ -247,10 +247,11 @@ class DeckInspector {
 
   checkRoleRestrictedCards() {
     const roleRestrictedCards = DeckInspector.findRoleRestrictedCards(this.slots);
-    const roleCard = this.findSlotsBy('type', 'role')[0].card;
+    console.log(roleRestrictedCards);
+    console.log(this.role.traits);
 
     for (const card of roleRestrictedCards) {
-      if (roleCard.traits.includes(card.role_restriction)) {
+      if (!this.role.traits.includes(card.role_restriction)) {
         return 19;
       }
     }
@@ -275,7 +276,7 @@ class DeckInspector {
   }
 
   static findRoleRestrictedCards(slots) {
-    return slots.filter(slot => slot.card.role_restriction != null);
+    return slots.filter(slot => slot.card.role_restriction != null).map(slot => slot.card);
   }
 
   static count(slots) {
