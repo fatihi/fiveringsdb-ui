@@ -60,7 +60,8 @@ class DeckInspector {
       || this.checkRoleDeck()
       || this.checkProvinceDeck()
       || this.checkDynastyDeck()
-      || this.checkConflictDeck();
+      || this.checkConflictDeck()
+      || this.checkRestrictedAndBannedCards();
   }
 
   checkCardCopies() {
@@ -119,16 +120,24 @@ class DeckInspector {
     let permutations = [];
     permutations.push(singleElementProvinces.map(province => province.element[0]));
 
+    console.log("Single Element Provinces: ");
+    singleElementProvinces.forEach(card => console.log(card.name))
+    console.log("Multiple Element Provinces: ");
+    multipleElementProvinces.forEach(card => console.log(card.name))
+    console.log("Base permutations: " + permutations);
+
     for (const province in multipleElementProvinces) {
       const newPermutations = [];
       for (const element in province.element) {
         for (const permutation in permutations) {
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
+          console.log("New Permutation: " newPermutation);
           newPermutations.push(newPermutation);
         }
       }
       permutations = newPermutations;
+      console.log("new Permutations: " + permutations)
     }
 
     let legal = false;
@@ -194,11 +203,6 @@ class DeckInspector {
       return 9;
     }
 
-    const characterCount = DeckInspector.count(DeckInspector.findSlotsBy(conflictDeck, 'type', 'character'));
-    if (characterCount > 10) {
-      return 12;
-    }
-
     if (this.clan) {
       let influencePool = this.getInfluencePool();
 
@@ -232,6 +236,18 @@ class DeckInspector {
       if (uniq(offclans.map(slot => slot.card.clan)).length > 1) {
         return 11;
       }
+    }
+
+    return 0;
+  }
+
+  checkRestrictedAndBannedCards() {
+    if (find(this.slots, slot => slot.card != null && slot.card.is_banned)) {
+      return 20;
+    }
+
+    if (this.slots.filter(slot => slot.card != null && slot.card.is_restricted).length > 1) {
+      return 21;
     }
 
     return 0;

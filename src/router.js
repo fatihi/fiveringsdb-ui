@@ -11,6 +11,8 @@ import DecksPrivateView from '@/components/Decks/PrivateView';
 import DecksList from '@/components/Decks/List';
 import BuilderEditor from '@/components/Builder/Editor';
 const  RulesReference = () => import('@/components/Rules/Reference');
+const  ImperialLaw = () => import('@/components/Rules/ImperialLaw');
+const  MultiplayerRules = () => import('@/components/Rules/MultiplayerRules');
 import BuilderPublisher from '@/components/Builder/Publisher';
 import BuilderPatcher from '@/components/Builder/Patcher';
 import AppFrontPage from '@/components/App/FrontPage';
@@ -106,6 +108,20 @@ export default new Router({
       path: '/rules/reference',
       name: 'rules-reference',
       component: RulesReference,
+      props: false,
+      meta: { section: 'rules' },
+    },
+    {
+      path: '/rules/imperial-law',
+      name: 'imperial-law',
+      component: ImperialLaw,
+      props: false,
+      meta: { section: 'rules' },
+    },
+    {
+      path: '/rules/multiplayer',
+      name: 'multiplayer-rules',
+      component: MultiplayerRules,
       props: false,
       meta: { section: 'rules' },
     },
