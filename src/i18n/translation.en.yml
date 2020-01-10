@@ -21,8 +21,9 @@ problem:
     16: The Province deck has cards from too many clans.
     17: The Conflict deck uses an off-clan card with no influence.
     18: The Conflict deck uses a forbidden secondary clan.
-    20: This deck contains a banned card.
-    21: This deck contains more than 1 card from the Restricted List.
+    19: The deck contains at least one card that requires a different role.
+    20: The deck contains a banned card.
+    21: The deck contains more than 1 card from the Restricted List.
 
 msg:
     empty_strain: Empty deck
