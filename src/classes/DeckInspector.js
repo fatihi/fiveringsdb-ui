@@ -247,8 +247,6 @@ class DeckInspector {
 
   checkRoleRestrictedCards() {
     const roleRestrictedCards = DeckInspector.findRoleRestrictedCards(this.slots);
-    console.log(roleRestrictedCards);
-    console.log(this.role.traits);
 
     for (const card of roleRestrictedCards) {
       if (!this.role.traits.includes(card.role_restriction)) {
