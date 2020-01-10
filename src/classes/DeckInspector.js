@@ -123,12 +123,12 @@ class DeckInspector {
     console.log("Length: " + permutations.length);
     console.log("Base permutation: " + permutations[0]);
 
-    for (const province in multipleElementProvinces) {
+    for (const province of multipleElementProvinces) {
       console.log("Working on province " + province.name);
       const newPermutations = [];
-      for (const element in province.element) {
+      for (const element of province.element) {
         console.log("Using element " + element);
-        for (const permutation in permutations) {
+        for (const permutation of permutations) {
           console.log("Enriching permutation " + permutation);
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
@@ -143,7 +143,7 @@ class DeckInspector {
 
     let legal = false;
 
-    for (const permutation in permutations) {
+    for (const permutation of permutations) {
       const uniqueElements = uniq(permutation);
       console.log("unique Elements: " + uniqueElements);
       if (uniqueElements.length === 5) {
