@@ -1,9 +1,9 @@
 <template>
     <span class="card-traits">
-        <span v-if="card.element" class="text-smallcaps">
-            {{ $t('element.' + card.element) }}.
+        <span v-for="element in card.element" class="text-smallcaps" :key="'trait-' + element">
+            {{ $t('element.' + element) }}.
         </span>
-        <span v-for="trait in card.traits" class="card-trait">
+        <span v-for="trait in card.traits" class="card-trait"  :key="'trait-' + trait">
             {{ $t('trait.' + trait) }}.
         </span>
     </span>

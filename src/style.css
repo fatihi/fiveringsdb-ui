@@ -26,6 +26,10 @@ body {
     padding: 0;
 }
 
+.province-element {
+    padding: 0 1px;
+}
+
 .popover-card {
     border: none;
 }
