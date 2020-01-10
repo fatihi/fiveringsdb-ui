@@ -132,7 +132,6 @@ export default {
       let roleRestrictions = this.roleRestrictionFilter
         .map(restriction => restriction.role_restriction)
         .filter(restriction => restriction.isNull == null)
-      console.log(roleRestrictions);
       let illegalSlots = this.allCards.map(record => ({
         card: record,
         min: 0,
@@ -142,7 +141,6 @@ export default {
         .filter(slot => slot.current > 0)
         .filter(slot => slot.card.role_restriction != null)
         .filter(slot => roleRestrictions.filter(restriction => restriction == slot.card.role_restriction).length == 0);
-      console.log(illegalSlots);
       return illegalSlots;
     }
   },
