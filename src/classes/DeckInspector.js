@@ -119,33 +119,22 @@ class DeckInspector {
 
     let permutations = [singleElementProvinces.map(province => province.element[0])];
 
-    console.log("Base permutations: " + permutations);
-    console.log("Length: " + permutations.length);
-    console.log("Base permutation: " + permutations[0]);
-
     for (const province of multipleElementProvinces) {
-      console.log("Working on province " + province.name);
       const newPermutations = [];
       for (const element of province.element) {
-        console.log("Using element " + element);
         for (const permutation of permutations) {
-          console.log("Enriching permutation " + permutation);
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
-          console.log("New Permutation: " + newPermutation);
           newPermutations.push(newPermutation);
         }
       }
-      console.log("new Permutations: " + newPermutations)
       permutations = Array.from(newPermutations);
-      console.log("Permutations after copy: " + permutations)
     }
 
     let legal = false;
 
     for (const permutation of permutations) {
       const uniqueElements = uniq(permutation);
-      console.log("unique Elements: " + uniqueElements);
       if (uniqueElements.length === 5) {
         legal = true;
       } else if (isSeeker && uniqueElements.length === 4 && permutation.filter(element => element === seekerElement).length === 2) {
