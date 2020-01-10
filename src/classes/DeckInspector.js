@@ -132,7 +132,7 @@ class DeckInspector {
         for (const permutation in permutations) {
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
-          console.log("New Permutation: " newPermutation);
+          console.log("New Permutation: " + newPermutation);
           newPermutations.push(newPermutation);
         }
       }
