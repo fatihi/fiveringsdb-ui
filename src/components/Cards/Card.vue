@@ -35,8 +35,15 @@
                 <span>Political: {{ card.political_bonus === undefined ? '-' : card.political_bonus }}.</span>
             </p>
             <p v-if="card.type === 'province'">
-                <span v-bind:class="'icon-element-' + card.element"></span>
-                <span class="text-smallcaps">{{ $t('element.' + card.element) }}.</span>
+                <span v-if="card.element.length === 5"
+                      :class="'icon-element-all'"></span>
+                <span v-else 
+                    v-for="element in card.element" 
+                    :key="'icon-' + element"
+                    v-bind:class="'province-element icon-element-' + element"></span>
+                <span v-for="element in card.element"
+                        :key="'trait-' + element" 
+                        class="text-smallcaps">{{ $t('element.' + element) }}. </span>
                 <span>Strength: {{ card.strength }}.</span>
             </p>
             <p v-if="card.type === 'holding'">

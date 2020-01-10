@@ -110,18 +110,41 @@ class DeckInspector {
       return 14;
     }
 
-    const provinceElements = map(provinceDeck, slot => slot.card.element);
-    if (uniq(provinceElements).length < 5) {
-      let seekerException = false;
-      if (this.role && this.role.traits.includes('seeker')) {
-        if (difference(provinceElements, this.role.traits).length === 3) {
-          seekerException = true;
+    const allElements = ['air', 'earth', 'fire', 'void', 'water'];
+    const isSeeker = this.role && this.role.traits.includes('seeker');
+    const seekerElement = isSeeker ? this.role.traits.find(trait => allElements.includes(trait)) : '';
+    const provinceCards = provinceDeck.map(slot => slot.card);
+    const singleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length === 1);
+    const multipleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length > 1);
+
+    let permutations = [];
+    permutations.push(singleElementProvinces.map(province => province.element[0]));
+
+    for (const province in multipleElementProvinces) {
+      const newPermutations = [];
+      for (const element in province.element) {
+        for (const permutation in permutations) {
+          const newPermutation = Array.from(permutation);
+          newPermutation.push(element);
+          newPermutations.push(newPermutation);
         }
       }
+      permutations = newPermutations;
+    }
 
-      if (seekerException === false) {
-        return 15;
+    let legal = false;
+
+    for (const permutation in permutations) {
+      const uniqueElements = uniq(permutation);
+      if (uniqueElements.length === 5) {
+        legal = true;
+      } else if (isSeeker && uniqueElements.length === 4 && permutation.filter(element => element === seekerElement).length === 2) {
+        legal = true;
       }
+    }
+
+    if (!legal) {
+      return 15;
     }
 
     if (this.clan) {

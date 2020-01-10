@@ -20,7 +20,9 @@
                 </div>
                 <div v-for="card in provinceDeck" :key="card.id">
                     <utils-card-link :card="card"></utils-card-link>
-                    <span class="text-secondary text-smallcaps">{{ $t('element.'+card.element) }}</span>
+                    <span v-for="element in card.element" 
+                          :key="'text-' + element" 
+                          class="text-secondary text-smallcaps">{{ $t('element.' + element) }}</span>
                 </div>
                 <div class="mt-4">
                     Influence: {{ influenceSpent }}/{{ influencePool }}<span v-if="influencePool !== influenceSpent" >, {{ influencePool - influenceSpent }} remaining</span>
