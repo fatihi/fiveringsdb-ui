@@ -125,21 +125,25 @@ class DeckInspector {
     for (const province in multipleElementProvinces) {
       const newPermutations = [];
       for (const element in province.element) {
+        console.log("Using element " + element);
         for (const permutation in permutations) {
+          console.log("Enriching permutation " + permutation);
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
           console.log("New Permutation: " + newPermutation);
           newPermutations.push(newPermutation);
         }
       }
-      permutations = newPermutations;
-      console.log("new Permutations: " + permutations)
+      console.log("new Permutations: " + newPermutations)
+      permutations = Array.from(newPermutations);
+      console.log("Permutations after copy: " + permutations)
     }
 
     let legal = false;
 
     for (const permutation in permutations) {
       const uniqueElements = uniq(permutation);
+      console.log("unique Elements: " + uniqueElements);
       if (uniqueElements.length === 5) {
         legal = true;
       } else if (isSeeker && uniqueElements.length === 4 && permutation.filter(element => element === seekerElement).length === 2) {

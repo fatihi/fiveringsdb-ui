@@ -2,7 +2,7 @@
     <div class="deck-content">
         <div v-if="problem" class="row">
             <div class="col-md-12">
-                <div class="alert alert-error">
+                <div class="alert alert-danger">
                     {{ $t('problem.' + problem) }}
                 </div>
             </div>
