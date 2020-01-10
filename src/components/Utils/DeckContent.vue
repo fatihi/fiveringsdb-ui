@@ -2,7 +2,7 @@
     <div class="deck-content">
         <div v-if="problem" class="row">
             <div class="col-md-12">
-                <div class="alert alert-warning">
+                <div class="alert alert-error">
                     {{ $t('problem.' + problem) }}
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div v-for="card in provinceDeck" :key="card.id">
                     <utils-card-link :card="card"></utils-card-link>
-                    <span class="text-secondary text-smallcaps">{{ $t('element.'+card.element) }}</span>
+                    <span class="text-secondary text-smallcaps">{{ $t('element.'+card.element) }} </span>
                 </div>
                 <div class="mt-4">
                     Influence: {{ influenceSpent }}/{{ influencePool }}<span v-if="influencePool !== influenceSpent" >, {{ influencePool - influenceSpent }} remaining</span>
