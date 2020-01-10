@@ -121,8 +121,10 @@ class DeckInspector {
 
     console.log("Base permutations: " + permutations);
     console.log("Length: " + permutations.length);
+    console.log("Base permutation: " + permutations[0]);
 
     for (const province in multipleElementProvinces) {
+      console.log("Working on province " + province.name);
       const newPermutations = [];
       for (const element in province.element) {
         console.log("Using element " + element);
