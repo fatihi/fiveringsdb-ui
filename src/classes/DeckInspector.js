@@ -117,14 +117,10 @@ class DeckInspector {
     const singleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length === 1);
     const multipleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length > 1);
 
-    let permutations = [];
-    permutations.push(singleElementProvinces.map(province => province.element[0]));
+    let permutations = [singleElementProvinces.map(province => province.element[0])];
 
-    console.log("Single Element Provinces: ");
-    singleElementProvinces.forEach(card => console.log(card.name))
-    console.log("Multiple Element Provinces: ");
-    multipleElementProvinces.forEach(card => console.log(card.name))
     console.log("Base permutations: " + permutations);
+    console.log("Length: " + permutations.length);
 
     for (const province in multipleElementProvinces) {
       const newPermutations = [];
