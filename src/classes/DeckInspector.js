@@ -113,12 +113,18 @@ class DeckInspector {
     const allElements = ['air', 'earth', 'fire', 'void', 'water'];
     const isSeeker = this.role && this.role.traits.includes('seeker');
     const seekerElement = isSeeker ? this.role.traits.find(trait => allElements.includes(trait)) : '';
-    const provinceCards = map(provinceDeck, slot => slot.card);
-    const singleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length != null && card.element.length === 1);
-    const multipleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length != null && card.element.length > 1);
+    const provinceCards = provinceDeck.map(slot => slot.card);
+    const singleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length === 1);
+    const multipleElementProvinces = provinceCards.filter(card => card.element != null && card.element.length > 1);
 
-    let permutations = [singleElementProvinces.map(province => province.element[0])];
-    alert(permutations);
+    let permutations = [];
+    permutations.push(singleElementProvinces.map(province => province.element[0]));
+
+    console.log("Single Element Provinces: ");
+    singleElementProvinces.forEach(card => console.log(card.name))
+    console.log("Multiple Element Provinces: ");
+    multipleElementProvinces.forEach(card => console.log(card.name))
+    console.log("Base permutations: " + permutations);
 
     for (const province in multipleElementProvinces) {
       const newPermutations = [];
@@ -126,7 +132,7 @@ class DeckInspector {
         for (const permutation in permutations) {
           const newPermutation = Array.from(permutation);
           newPermutation.push(element);
-          console.log("New Permutation: " + newPermutation);
+          console.log("New Permutation: " newPermutation);
           newPermutations.push(newPermutation);
         }
       }
