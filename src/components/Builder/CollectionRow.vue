@@ -1,5 +1,5 @@
 <template>
-    <tr class="collection-row">
+    <tr :class="'collection-row'">
         <td>
             <builder-quantity-selector
                     :min="min"
@@ -13,6 +13,14 @@
             <utils-card-link
                     :card="card"
             ></utils-card-link>
+            <span v-if="illegal" 
+                  :id="'role-warning_' +card.id" 
+                  class="fa fa-exclamation-triangle"          
+                  style="color:red"></span>
+
+            <b-popover :target="'role-warning_'+card.id" triggers="hover" placement="right">
+              The chosen role does not meet the role requirement of this card.
+            </b-popover>               
         </td>
         <td>
             <utils-card-traits-element :card="card"></utils-card-traits-element>
@@ -39,7 +47,7 @@
       UtilsCardTraitsElement,
       UtilsInfluenceCost,
     },
-    props: ['card', 'min', 'max', 'current', 'influence'],
+    props: ['card', 'min', 'max', 'current', 'influence', 'illegal'],
     methods: {
       change(quantity) {
         this.$emit('change', {
@@ -52,7 +60,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
     .card-name {
         padding: .55rem .25rem;
     }
