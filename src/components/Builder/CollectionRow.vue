@@ -18,7 +18,7 @@
                   class="fa fa-exclamation-triangle"          
                   style="color:red"></span>
 
-            <b-popover :target="'role-warning_'+card.id" triggers="hover" placement="right">
+            <b-popover v-if="illegal" :target="'role-warning_'+card.id" triggers="hover" placement="top">
               The chosen role does not meet the role requirement of this card.
             </b-popover>               
         </td>
