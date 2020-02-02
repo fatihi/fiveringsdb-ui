@@ -61,7 +61,8 @@ class DeckInspector {
       || this.checkProvinceDeck()
       || this.checkDynastyDeck()
       || this.checkConflictDeck()
-      || this.checkRestrictedAndBannedCards();
+      || this.checkRestrictedAndBannedCards()
+      || this.checkRoleRestrictedCards();
   }
 
   checkCardCopies() {
@@ -244,6 +245,18 @@ class DeckInspector {
     return 0;
   }
 
+  checkRoleRestrictedCards() {
+    const roleRestrictedCards = DeckInspector.findRoleRestrictedCards(this.slots);
+
+    for (const card of roleRestrictedCards) {
+      if (!this.role.traits.includes(card.role_restriction)) {
+        return 19;
+      }
+    }
+
+    return 0;
+  }
+
   /**
    * static functions
    */
@@ -258,6 +271,10 @@ class DeckInspector {
 
   static findSlotsBy(slots, keyName, key) {
     return slots.filter(slot => slot.card[keyName] === key);
+  }
+
+  static findRoleRestrictedCards(slots) {
+    return slots.filter(slot => slot.card.role_restriction != null).map(slot => slot.card);
   }
 
   static count(slots) {

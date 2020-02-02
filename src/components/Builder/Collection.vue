@@ -17,6 +17,17 @@
       </thead>
       <tbody>
         <builder-collection-row
+          v-for="cardslot in illegalCardslots"
+          :key="cardslot.card.id + '_illegal'"
+          :card="cardslot.card"
+          :min="cardslot.min"
+          :max="cardslot.max"
+          :current="cardslot.current"
+          :influence="cardslot.card.clan !== mainClan"
+          @change="changeQuantity"
+          :illegal="true"
+        ></builder-collection-row>
+        <builder-collection-row
           v-for="cardslot in cardslots"
           :key="cardslot.card.id"
           :card="cardslot.card"
@@ -25,6 +36,7 @@
           :current="cardslot.current"
           :influence="cardslot.card.clan !== mainClan"
           @change="changeQuantity"
+          :illegal="false"
         ></builder-collection-row>
       </tbody>
     </table>
@@ -91,26 +103,46 @@ export default {
       return roleRestrictionFilter;
     },
     cards() {
-      const clauses = queryParser.parse(this.cardFilters.queryString);
-      const queryInput = new QueryInput(clauses);
-      const queryFilters = queryBuilder.build(queryInput);
-      let cards = stores.cards
-        .apply(this, queryFilters)
-        .filter(this.cardFilters.filter)
-        .filter(this.cardFilters.packFilter);
+      let cards = this.filteredCards;
       if (this.mainClan !== null) {
         cards = cards.filter({ allowed_clans: { has: this.mainClan } });
       }
       return cards.filter(this.roleRestrictionFilter);
     },
+    allCards() {
+        return stores.cards.apply(this)
+    },
+    filteredCards() {
+      const clauses = queryParser.parse(this.cardFilters.queryString);
+      const queryInput = new QueryInput(clauses);
+      const queryFilters = queryBuilder.build(queryInput);
+      return stores.cards.apply(this, queryFilters)
+        .filter(this.cardFilters.filter)
+        .filter(this.cardFilters.packFilter);
+    },
     cardslots() {
       return this.cards.map(record => ({
         card: record,
         min: 0,
-        max: this.getMaxQuantity(record) || 3,
+        max: record.deck_limit,
         current: this.getQuantity(record) || 0,
       }));
     },
+    illegalCardslots() {
+      let roleRestrictions = this.roleRestrictionFilter
+        .map(restriction => restriction.role_restriction)
+        .filter(restriction => restriction.isNull == null)
+      let illegalSlots = this.allCards.map(record => ({
+        card: record,
+        min: 0,
+        max: record.deck_limit,
+        current: this.getQuantity(record) || 0,
+      }))
+        .filter(slot => slot.current > 0)
+        .filter(slot => slot.card.role_restriction != null)
+        .filter(slot => roleRestrictions.filter(restriction => restriction == slot.card.role_restriction).length == 0);
+      return illegalSlots;
+    }
   },
   methods: {
     getQuantity(card) {
