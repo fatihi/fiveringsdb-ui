@@ -128,12 +128,12 @@ class QueryMapper {
       },
       element: {
         name: 'element',
-        type: 'id',
+        type: 'join',
         description: 'Element',
       },
       e: {
         name: 'element',
-        type: 'id',
+        type: 'join',
         description: 'Element',
       },
       mil: {
