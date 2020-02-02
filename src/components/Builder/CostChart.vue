@@ -78,7 +78,7 @@
     },
     computed: {
       data() {
-        const maxCost = max(this.slots.map(slot => slot.card.cost));
+        const maxCost = max(this.slots.map(slot => Number.parseInt(slot.card.cost)));
 
         if(isNaN(maxCost)) {
           return null;
@@ -89,8 +89,8 @@
             .slots
             .filter(slot => slot.card.side === config.side && slot.card.type === config.type)
             .reduce((accumulator, currentValue) => {
-              if (currentValue.card.cost !== null) {
-                accumulator[currentValue.card.cost] += currentValue.quantity;
+              if (currentValue.card.cost !== null && Number.isInteger(currentValue.card.cost)) {
+                accumulator[Number.parseInt(currentValue.card.cost)] += currentValue.quantity;
               }
               return accumulator;
             }, fill(Array(maxCost + 1), 0));
