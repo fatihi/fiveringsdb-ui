@@ -89,7 +89,7 @@
             .slots
             .filter(slot => slot.card.side === config.side && slot.card.type === config.type)
             .reduce((accumulator, currentValue) => {
-              if (currentValue.card.cost !== null && Number.isInteger(currentValue.card.cost)) {
+              if (currentValue.card.cost !== null && Number.isInteger(Number.parseInt(currentValue.card.cost))) {
                 accumulator[Number.parseInt(currentValue.card.cost)] += currentValue.quantity;
               }
               return accumulator;
