@@ -12,7 +12,7 @@
                     <b-nav-item-dropdown text="Cards" left :class="[ section === 'cards' ? 'active' : '']">
                         <b-dropdown-item :to="{name:'cards-by-default'}" exact>All</b-dropdown-item>
                         <template v-for="cycle in cycles">
-                          <template v-if="cycle.postion < 90">
+                          <template v-if="cycle.position < 90">
                             <b-dropdown-divider :key="cycle.name + '_divider'"/>
                             <template v-if="cycle.size >= 1">
                               <b-dropdown-header  v-b-toggle="cycle.id"
