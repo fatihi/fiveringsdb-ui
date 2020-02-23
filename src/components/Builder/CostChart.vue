@@ -22,7 +22,7 @@
     {
       type: 'event',
       side: 'dynasty',
-      color: '#7085b3',
+      color: '#70a8b3',
     },
     {
       type: 'event',
