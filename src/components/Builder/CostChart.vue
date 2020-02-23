@@ -17,7 +17,12 @@
     {
       type: 'character',
       side: 'dynasty',
-      color: '#6a89cc',
+      color: '#3760b8',
+    },
+    {
+      type: 'event',
+      side: 'dynasty',
+      color: '#7085b3',
     },
     {
       type: 'event',
@@ -96,7 +101,7 @@
             }, fill(Array(maxCost + 1), 0));
 
           return {
-            label: (config.type === 'character' ? this.$t(`side.${config.side}`) + ' ' : '') + this.$t(`type.${config.type}`),
+            label: (config.type === 'character' || config.type === 'event') ? this.$t(`side.${config.side}`) + ' ' : '') + this.$t(`type.${config.type}`),
             stack: config.side,
             backgroundColor: config.color,
             data: costs,
