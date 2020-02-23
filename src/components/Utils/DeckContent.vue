@@ -86,7 +86,7 @@
   import typeIcons from '@/service/typeIcons';
 
   const sideTypes = {
-    dynasty: ['character', 'holding'],
+    dynasty: ['character', 'event', 'holding'],
     conflict: ['event', 'attachment', 'character'],
   };
 
