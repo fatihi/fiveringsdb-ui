@@ -101,7 +101,7 @@
             }, fill(Array(maxCost + 1), 0));
 
           return {
-            label: (config.type === 'character' || config.type === 'event') ? this.$t(`side.${config.side}`) + ' ' : '') + this.$t(`type.${config.type}`),
+            label: ((config.type === 'character' || config.type === 'event') ? this.$t(`side.${config.side}`) + ' ' : '') + this.$t(`type.${config.type}`),
             stack: config.side,
             backgroundColor: config.color,
             data: costs,
