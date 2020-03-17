@@ -58,6 +58,9 @@ export default {
     BuilderCollectionRow,
     BuilderCollectionFilter,
   },
+  props: [
+      'format'
+  ],
   data() {
     return {
       cardFilters: {
@@ -122,11 +125,12 @@ export default {
     },
     cardslots() {
       return this.cards.map(record => ({
-        card: record,
-        min: 0,
-        max: record.deck_limit,
-        current: this.getQuantity(record) || 0,
-      }));
+          card: record,
+          min: 0,
+          max: this.getMaxQuantityForCard(record, this.format),
+          current: this.getQuantity(record) || 0,
+        }
+      ))
     },
     illegalCardslots() {
       let roleRestrictions = this.roleRestrictionFilter
@@ -142,9 +146,17 @@ export default {
         .filter(slot => slot.card.role_restriction != null)
         .filter(slot => roleRestrictions.filter(restriction => restriction == slot.card.role_restriction).length == 0);
       return illegalSlots;
-    }
+    },
   },
   methods: {
+    getMaxQuantityForCard(card, format) {
+      const deckLimit = card.deck_limit;
+      if (deckLimit <= 2) {
+        return deckLimit;
+      } else {
+        return format === 'skirmish' ? 2 : deckLimit;
+      }
+    },
     getQuantity(card) {
       return this.$store.getters.quantity(card.id);
     },

@@ -43,7 +43,7 @@
                 <cost-chart :deck="deck"></cost-chart>
             </div>
             <div class="col-md-6">
-                <builder-collection></builder-collection>
+                <builder-collection :format="metadata.format"></builder-collection>
             </div>
 
             <utils-version-history :id="$route.params.strainId" :published="false"></utils-version-history>
@@ -78,7 +78,7 @@
       UtilsVersionHistory,
     },
     data() {
-      const formats = ['single-core', 'standard'];
+      const formats = ['single-core', 'standard', 'skirmish'];
       return {
         formatOptions: formats.map(format => ({ value: format, text: this.$t(`format.${format}`) })),
         loading: false,
@@ -95,6 +95,10 @@
       $route: 'fetchData',
       bootstrap() {
         const slots = {};
+        let format = 'standard'
+        if (this.bootstrap.format !== null) {
+          format = this.bootstrap.format
+        }
         if (this.bootstrap.role !== null) {
           slots[this.bootstrap.role] = 1;
         }
@@ -104,7 +108,7 @@
         this.$store.commit({ type: types.SET_SLOTS, slots });
         this.metadata = {
           name: `New ${this.$t(`clan.${this.bootstrap.clan}`)} deck`,
-          format: 'standard',
+          format: format,
         };
         this.wizard = false;
       },

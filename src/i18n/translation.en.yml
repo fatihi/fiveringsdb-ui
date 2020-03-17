@@ -1,6 +1,7 @@
 format:
     standard: 'Standard Format'
     single-core: 'Single-Core Format'
+    skirmish: 'Skirmish Format'
 
 problem:
     0: This deck is valid.
@@ -24,6 +25,8 @@ problem:
     19: The deck contains at least one card that requires a different role.
     20: The deck contains a banned card.
     21: The deck contains more than 1 card from the Restricted List.
+    40: The deck cannot have a Stronghold in the Skirmish Format.
+    41: The deck cannot have Provinces in the Skirmish Format.
 
 msg:
     empty_strain: Empty deck
