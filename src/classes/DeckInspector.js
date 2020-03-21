@@ -3,11 +3,12 @@ import map from 'lodash/map';
 import uniq from 'lodash/uniq';
 
 class DeckInspector {
-  constructor(slots, format) {
+  constructor(slots, format, clanProp) {
     this.slots = slots;
     this.format = format;
     this.stronghold = this.findCardByType('stronghold');
-    this.clan = this.stronghold ? this.stronghold.clan : null;
+    this.clan = this.stronghold ? this.stronghold.clan :
+                    clanProp || null;
     this.role = this.findCardByType('role');
     this.supportingClan = null;
   }

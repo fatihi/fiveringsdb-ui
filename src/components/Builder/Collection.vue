@@ -59,7 +59,8 @@ export default {
     BuilderCollectionFilter,
   },
   props: [
-      'format'
+      'format',
+      'clan'
   ],
   data() {
     return {
@@ -88,7 +89,8 @@ export default {
         .first();
     },
     mainClan() {
-      return this.stronghold ? this.stronghold.clan : null;
+      return this.stronghold ? this.stronghold.clan :
+                this.clan ? this.clan : null;
     },
     roleRestrictionFilter() {
       const roleRestrictionFilter = [
