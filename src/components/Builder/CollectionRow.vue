@@ -12,15 +12,16 @@
             <utils-card-icon :card="card"></utils-card-icon>
             <utils-card-link
                     :card="card"
+                    :format="format"
             ></utils-card-link>
-            <span v-if="illegal" 
-                  :id="'role-warning_' +card.id" 
-                  class="fa fa-exclamation-triangle"          
+            <span v-if="illegal"
+                  :id="'role-warning_' +card.id"
+                  class="fa fa-exclamation-triangle"
                   style="color:red"></span>
 
             <b-popover v-if="illegal" :target="'role-warning_'+card.id" triggers="hover" placement="top">
               The chosen role does not meet the role requirement of this card.
-            </b-popover>               
+            </b-popover>
         </td>
         <td>
             <utils-card-traits-element :card="card"></utils-card-traits-element>
@@ -47,7 +48,7 @@
       UtilsCardTraitsElement,
       UtilsInfluenceCost,
     },
-    props: ['card', 'min', 'max', 'current', 'influence', 'illegal'],
+    props: ['card', 'min', 'max', 'current', 'influence', 'illegal', 'format'],
     methods: {
       change(quantity) {
         this.$emit('change', {
