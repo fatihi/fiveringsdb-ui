@@ -26,6 +26,7 @@
           :influence="cardslot.card.clan !== mainClan"
           @change="changeQuantity"
           :illegal="true"
+          :format="format"
         ></builder-collection-row>
         <builder-collection-row
           v-for="cardslot in cardslots"
@@ -37,6 +38,7 @@
           :influence="cardslot.card.clan !== mainClan"
           @change="changeQuantity"
           :illegal="false"
+          :format="format"
         ></builder-collection-row>
       </tbody>
     </table>

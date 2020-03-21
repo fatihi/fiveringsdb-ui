@@ -4,14 +4,16 @@
           @click.prevent="showModal">
           <span>{{ card.name }}</span>
         </a>
-        <span v-if="card.is_banned" :id="'banned_' + card.id" class="fa fa-ban" style="color:red"></span>
-        <b-popover v-if="card.is_banned" :target="'banned_'+card.id" triggers="hover" placement="top">
-            This card is on the Banned List.
-        </b-popover>
-        <span v-if="card.is_restricted" :id="'restricted_' + card.id" class="fa fa-exclamation-triangle" style="color:orange"></span>
-        <b-popover v-if="card.is_restricted" :target="'restricted_'+card.id" triggers="hover" placement="top">
-            This card is on the Restricted List.
-        </b-popover>
+        <template v-if="format !== 'skirmish'">
+          <span v-if="card.is_banned" :id="'banned_standard_' + card.id" class="fa fa-ban" style="color:red"></span>
+          <b-popover v-if="card.is_banned" :target="'banned_standard_'+card.id" triggers="hover" placement="top">
+              This card is on the Standard Format Banned List.
+          </b-popover>
+          <span v-if="card.is_restricted" :id="'restricted_' + card.id" class="fa fa-exclamation-triangle" style="color:orange"></span>
+          <b-popover v-if="card.is_restricted" :target="'restricted_'+card.id" triggers="hover" placement="top">
+              This card is on the Standard Format Restricted List.
+          </b-popover>
+        </template>
     </span>
 </template>
 
@@ -23,7 +25,7 @@
     components: {
       CardsCard,
     },
-    props: ['card'],
+    props: ['card', 'format'],
     data() {
       return {
         popover: {
