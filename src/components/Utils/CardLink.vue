@@ -14,6 +14,12 @@
               This card is on the Standard Format Restricted List.
           </b-popover>
         </template>
+        <template v-if="format !== 'standard' && format !== 'single-core'">
+          <span v-if="card.is_banned_in_skirmish" :id="'banned_skirmish_' + card.id" class="fa fa-ban" style="color:green"></span>
+          <b-popover v-if="card.is_banned_in_skirmish" :target="'banned_skirmish_'+card.id" triggers="hover" placement="top">
+              This card is on the Skirmish Format Banned List.
+          </b-popover>
+        </template>
     </span>
 </template>
 
