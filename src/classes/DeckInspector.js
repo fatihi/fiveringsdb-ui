@@ -1,7 +1,6 @@
 import find from 'lodash/find';
 import map from 'lodash/map';
 import uniq from 'lodash/uniq';
-import difference from 'lodash/difference';
 
 class DeckInspector {
   constructor(slots, format) {
@@ -11,6 +10,24 @@ class DeckInspector {
     this.clan = this.stronghold ? this.stronghold.clan : null;
     this.role = this.findCardByType('role');
     this.supportingClan = null;
+  }
+
+  getFormatParameters() {
+    if (this.format === 'single-core') {
+      return {
+        minSize: 30,
+        maxSize: 30,
+      };
+    } else if (this.format === 'skirmish') {
+      return {
+        minSize: 30,
+        maxSize: 40,
+      };
+    }
+    return {
+      minSize: 40,
+      maxSize: 45,
+    };
   }
 
   findCardByType(type) {
@@ -23,6 +40,10 @@ class DeckInspector {
 
   getInfluencePool() {
     let influencePool = 0;
+
+    if (this.format === 'skirmish') {
+      return 6;
+    }
 
     if (this.stronghold) {
       influencePool = this.stronghold.influence_pool;
@@ -77,6 +98,14 @@ class DeckInspector {
     const strongholdDeck = this.findSlotsBy('type', 'stronghold');
     const strongholdCount = DeckInspector.count(strongholdDeck);
 
+    if (this.format === 'skirmish' && strongholdCount !== 0) {
+      return 40;
+    }
+
+    if (this.format === 'skirmish' && strongholdCount === 0) {
+      return 0;
+    }
+
     if (strongholdCount < 1) {
       return 2;
     }
@@ -92,6 +121,14 @@ class DeckInspector {
     const roleDeck = this.findSlotsBy('type', 'role');
     const roleCount = DeckInspector.count(roleDeck);
 
+    if (this.format === 'skirmish' && roleCount !== 0) {
+      return 42;
+    }
+
+    if (this.format === 'skirmish' && roleCount === 0) {
+      return 0;
+    }
+
     if (roleCount > 1) {
       return 4;
     }
@@ -102,6 +139,14 @@ class DeckInspector {
   checkProvinceDeck() {
     const provinceDeck = this.findSlotsBy('type', 'province');
     const provinceCount = DeckInspector.count(provinceDeck);
+
+    if (this.format === 'skirmish' && provinceCount !== 0) {
+      return 41;
+    }
+
+    if (this.format === 'skirmish' && provinceCount === 0) {
+      return 0;
+    }
 
     if (provinceCount < 5) {
       return 13;
@@ -161,13 +206,11 @@ class DeckInspector {
     const dynastyDeck = this.findSlotsBy('side', 'dynasty');
     const dynastyCount = DeckInspector.count(dynastyDeck);
 
-    const minCount = this.format === 'single-core' ? 30 : 40;
-    if (dynastyCount < minCount) {
+    if (dynastyCount < this.getFormatParameters().minSize) {
       return 5;
     }
 
-    const maxCount = this.format === 'single-core' ? 30 : 45;
-    if (dynastyCount > maxCount) {
+    if (dynastyCount > this.getFormatParameters().maxSize) {
       return 6;
     }
 
@@ -185,13 +228,11 @@ class DeckInspector {
     const conflictDeck = this.findSlotsBy('side', 'conflict');
     const conflictCount = DeckInspector.count(conflictDeck);
 
-    const minCount = this.format === 'single-core' ? 30 : 40;
-    if (conflictCount < minCount) {
+    if (conflictCount < this.getFormatParameters().minSize) {
       return 8;
     }
 
-    const maxCount = this.format === 'single-core' ? 30 : 45;
-    if (conflictCount > maxCount) {
+    if (conflictCount > this.getFormatParameters().maxSize) {
       return 9;
     }
 
@@ -199,7 +240,8 @@ class DeckInspector {
       let influencePool = this.getInfluencePool();
 
       const offclans = DeckInspector.findSlotsOffClan(conflictDeck, this.clan);
-      let undefinedInfluenceCost = false, unsupportedClan = false;
+      let undefinedInfluenceCost = false;
+      let unsupportedClan = false;
 
       offclans.forEach((slot) => {
         if (slot.card.influence_cost === undefined) {
