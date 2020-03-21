@@ -277,6 +277,10 @@ class DeckInspector {
   }
 
   checkRestrictedAndBannedCards() {
+    if (this.format === 'skirmish') {
+      return 0;
+    }
+
     if (find(this.slots, slot => slot.card != null && slot.card.is_banned)) {
       return 20;
     }
