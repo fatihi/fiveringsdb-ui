@@ -27,6 +27,7 @@ problem:
     21: The deck contains more than 1 card from the Restricted List.
     40: The deck cannot have a Stronghold in the Skirmish Format.
     41: The deck cannot have Provinces in the Skirmish Format.
+    42: The deck cannot have a Role in the Skirmish Format.
 
 msg:
     empty_strain: Empty deck

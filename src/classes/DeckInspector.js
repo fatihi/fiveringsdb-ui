@@ -102,6 +102,10 @@ class DeckInspector {
       return 40;
     }
 
+    if (this.format === 'skirmish' && strongholdCount === 0) {
+      return 0;
+    }
+
     if (strongholdCount < 1) {
       return 2;
     }
@@ -117,6 +121,14 @@ class DeckInspector {
     const roleDeck = this.findSlotsBy('type', 'role');
     const roleCount = DeckInspector.count(roleDeck);
 
+    if (this.format === 'skirmish' && roleCount !== 0) {
+      return 42;
+    }
+
+    if (this.format === 'skirmish' && roleCount === 0) {
+      return 0;
+    }
+
     if (roleCount > 1) {
       return 4;
     }
@@ -130,6 +142,10 @@ class DeckInspector {
 
     if (this.format === 'skirmish' && provinceCount !== 0) {
       return 41;
+    }
+
+    if (this.format === 'skirmish' && provinceCount === 0) {
+      return 0;
     }
 
     if (provinceCount < 5) {
