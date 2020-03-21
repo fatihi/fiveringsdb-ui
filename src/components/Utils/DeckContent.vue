@@ -21,8 +21,8 @@
                 <div v-for="card in provinceDeck" :key="card.id">
                     <utils-card-link :card="card"></utils-card-link>
 
-                    <span v-for="element in card.element" 
-                          :key="'text-' + element" 
+                    <span v-for="element in card.element"
+                          :key="'text-' + element"
                           class="text-secondary text-smallcaps">{{ $t('element.' + element) }} </span>
                 </div>
                 <div class="mt-4">
@@ -130,7 +130,7 @@
         }));
       },
       inspector() {
-        return new DeckInspector(this.slots, this.deck.format);
+        return new DeckInspector(this.slots, this.deck.format, this.deck.clan);
       },
       stronghold() {
         return this.inspector.findCardByType('stronghold');

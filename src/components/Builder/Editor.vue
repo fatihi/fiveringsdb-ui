@@ -43,7 +43,7 @@
                 <cost-chart :deck="deck"></cost-chart>
             </div>
             <div class="col-md-6">
-                <builder-collection :format="metadata.format"></builder-collection>
+                <builder-collection :format="metadata.format" :clan="metadata.clan"></builder-collection>
             </div>
 
             <utils-version-history :id="$route.params.strainId" :published="false"></utils-version-history>
@@ -109,6 +109,7 @@
         this.metadata = {
           name: `New ${this.$t(`clan.${this.bootstrap.clan}`)} deck`,
           format: format,
+          clan: this.bootstrap.clan,
         };
         this.wizard = false;
       },
