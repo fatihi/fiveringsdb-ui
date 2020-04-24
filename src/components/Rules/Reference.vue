@@ -13,7 +13,7 @@
         <div class="contents order-sm-1 col-sm-8 mt-3">
             <h2>RULES REFERENCE</h2>
             <p>
-                Version 12
+                Version 13
             </p>
             <hr>
             <section>
@@ -686,6 +686,13 @@
                         Courtesy is a keyword ability. When a card with the courtesy keyword leaves play, its controller
                         gains 1 fate.
                     </p>
+					<ul>
+						<li>
+							The courtesy keyword resolves after the card leaves play, before reactions to that card leaving 
+							play can be triggered.
+
+						</li>
+					</ul>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Covert</anchored-heading>
@@ -1662,6 +1669,11 @@
                             text is a shorthand explanation of how a keyword works, but it is not rules text and does
                             not replace the rules for that keyword in this glossary.
                         </li>
+						<li>
+							Keywords that resolve based on the occurrance of a triggering condition (such as a character 
+							leaving play) resolve immediately after the triggering condition occurs, before triggering 
+							any reaction abilities.
+						</li>
                         <li>
                             A card can have multiple instances of the same keyword. However, a card that does so functions as 
                             if it has one instance of that keyword, and the keyword will only resolve once per triggering condition.
@@ -2182,6 +2194,12 @@
                         Pride is a keyword ability. After a character with the pride keyword wins a conflict, honor that
                         character. After a character with the pride keyword loses a conflict, dishonor that character.
                     </p>
+					<ul>
+						<li>
+							The pride keyword resolves after the character wins or loses a conflict, before reactions to 
+							that conflict being won or loss can be triggered.
+						</li>
+					</ul>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Printed</anchored-heading>
@@ -2707,6 +2725,12 @@
                         Sincerity is a keyword ability. When a card with the sincerity keyword leaves play, its
                         controller draws 1 card.
                     </p>
+					<ul>
+						<li>
+							The sincerity keyword resolves after the card leaves play, before reactions to that card 
+							leaving play can be triggered.
+						</li>
+					</ul>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Skill</anchored-heading>
@@ -4393,22 +4417,20 @@
                     translated cards, promotional cards, and printings which may appear in alternate products.
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/city-of-the-open-hand" target="_blank">City of the Open Hand</a> 
-                    (Core Set, 6)
-                </h5>
-                <p>
-                    Should read: “...bow this stronghold and select one – either that opponent loses 1 honor, or you gain 1 honor."
-                    <br>
-                    <i>(Replaces “...bow this stronghold – take 1 honor from that player.")</i>
-                </p>
-                <h5>
                     <a href="https://fiveringsdb.com/card/restoration-of-balance" target="_blank">Restoration of Balance</a> 
                     (Core Set, 10)
                 </h5>
                 <p>
                     Should read: “<em>Interrupt</em>: When this province is broken..."
-                    <br>
-                    <i>(Replaces “<em>Reaction</em>: After this province is revealed...")</i>
+                    <br> <i>(Replaces “<em>Reaction</em>: After this province is revealed...")</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/kuroi-mori" target="_blank">Kuroi Mori</a> 
+                    (Core Set, 12)
+                </h5>
+                <p>
+                    Should read: “Cannot be a stronghold province.”
+                    <br> <i>(Added “Cannot be a stronghold province.”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/against-the-waves" target="_blank">Against the Waves</a> (Core Set, 117)
@@ -4447,6 +4469,13 @@
                     Should read: "While this character is honored, you may play each character in your provinces as if it were 
                     in your hand."
                     <br> <i>(Removed "reducing its cost by 1.")</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/those-who-serve" target="_blank">Those Who Serve</a> (The Emperor's Legion, 28)
+                </h5>
+                <p>
+                    Should read: “(to a minimum of 1).”
+                    <br> (Replaces “(to a minimum of 0).”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/kaiu-shihobu" target="_blank">Kaiu Shihobu</a> (Defenders of Rokugan, 10)
