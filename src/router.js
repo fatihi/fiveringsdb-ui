@@ -10,9 +10,10 @@ import DecksPublicView from '@/components/Decks/PublicView';
 import DecksPrivateView from '@/components/Decks/PrivateView';
 import DecksList from '@/components/Decks/List';
 import BuilderEditor from '@/components/Builder/Editor';
-const  RulesReference = () => import('@/components/Rules/Reference');
-const  ImperialLaw = () => import('@/components/Rules/ImperialLaw');
-const  MultiplayerRules = () => import('@/components/Rules/MultiplayerRules');
+const RulesReference = () => import('@/components/Rules/Reference');
+const ImperialLaw = () => import('@/components/Rules/ImperialLaw');
+const MultiplayerRules = () => import('@/components/Rules/MultiplayerRules');
+const Skirmish = () => import('@/components/Rules/Skirmish');
 import BuilderPublisher from '@/components/Builder/Publisher';
 import BuilderPatcher from '@/components/Builder/Patcher';
 import AppFrontPage from '@/components/App/FrontPage';
@@ -122,6 +123,13 @@ export default new Router({
       path: '/rules/multiplayer',
       name: 'multiplayer-rules',
       component: MultiplayerRules,
+      props: false,
+      meta: { section: 'rules' },
+    },
+    {
+      path: '/rules/skirmish',
+      name: 'skirmish-rules',
+      component: Skirmish,
       props: false,
       meta: { section: 'rules' },
     },
