@@ -61,6 +61,7 @@
                       <b-dropdown-item :to="{name:'rules-reference'}" exact>Rules Reference Guide</b-dropdown-item>
                       <b-dropdown-item :to="{name:'imperial-law'}" exact>The Imperial Law (Restricted and Ban List)</b-dropdown-item>
                       <b-dropdown-item :to="{name:'multiplayer-rules'}" exact>Multiplayer Rules</b-dropdown-item>
+                      <b-dropdown-item :to="{name:'skirmish-rules'}" exact>Skirmish Rules</b-dropdown-item>
                     </b-nav-item-dropdown>
 
                     <li class="nav-item col-sm">

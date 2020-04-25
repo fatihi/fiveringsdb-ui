@@ -16,7 +16,7 @@
             <section>
                 <anchored-heading @heading="add" :level="1">Banned List</anchored-heading>
                 <p>
-                    When deckbuilding, a player may not include any copies of a card on the banned list in their decks 
+                    When deckbuilding, a player may not include any copies of a card on the banned list in their decks
 		            and set of provinces.
                 </p>
                 <ul>
@@ -55,8 +55,8 @@
             <section>
                 <anchored-heading @heading="add" :level="1">Restricted List</anchored-heading>
                 <p>
-                    When deckbuilding, a player may select one card from the restricted list to include in their decks, 
-					and cannot include any other restricted cards in their decks and set of provinces. A player may run 
+                    When deckbuilding, a player may select one card from the restricted list to include in their decks,
+					and cannot include any other restricted cards in their decks and set of provinces. A player may run
 					as many copies of his or her chosen restricted card in a deck as the regular game rules (or card text) allow
                 </p>
                 <ul>
@@ -113,11 +113,11 @@
             <section>
                 <anchored-heading @heading="add" :level="1">Card Errata</anchored-heading>
                 <p>
-                    This section contains a list of changes to cards that are not reflected on the original printing of those cards. 
+                    This section contains a list of changes to cards that are not reflected on the original printing of those cards.
 					These changes to the cards alter how they are played during the game.
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/restoration-of-balance" target="_blank">Restoration of Balance</a> 
+                    <a href="https://fiveringsdb.com/card/restoration-of-balance" target="_blank">Restoration of Balance</a>
                     (Core Set, 10)
                 </h5>
                 <p>
@@ -126,7 +126,7 @@
                     <i>(Replaces “<em>Reaction</em>: After this province is revealed...”)</i>
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/kuroi-mori target="_blank">Kuroi Mori</a> 
+                    <a href="https://fiveringsdb.com/card/kuroi-mori target="_blank">Kuroi Mori</a>
                     (Core Set, 12)
                 </h5>
                 <p>
@@ -135,7 +135,7 @@
                     <i>(Added “Cannot be a stronghold province.”)</i>
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/against-the-waves" target="_blank">Against the Waves</a> 
+                    <a href="https://fiveringsdb.com/card/against-the-waves" target="_blank">Against the Waves</a>
                     (Core Set, 117)
                 </h5>
                 <p>
@@ -144,7 +144,7 @@
                     <i>(Added "you control")</i>
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/kyuden-isawa" target="_blank">Kyūden Isawa</a> 
+                    <a href="https://fiveringsdb.com/card/kyuden-isawa" target="_blank">Kyūden Isawa</a>
                     (Disciples of the Void, 1)
                 </h5>
                 <p>
@@ -156,18 +156,18 @@
                     <a href="https://fiveringsdb.com/card/kaito-kosori" target="_blank">Kaito Kosori</a> (Disciples of the Void, 18)
                 </h5>
                 <p>
-                    Should read: "During each <span class="icon icon-element-air"></span> conflict, if you control at least 1 
+                    Should read: "During each <span class="icon icon-element-air"></span> conflict, if you control at least 1
                     participating character and if this character is in your home area and ready, it contributes its skill to your side."
-                    <br> 
+                    <br>
 					<i>(Added "and ready.")</i>
                 </p>
 				<h5>
                     <a href="https://fiveringsdb.com/card/yogo-kikuyo" target="_blank">Yogo Kikuyo</a> (Disciples of the Void, 25)
                 </h5>
                 <p>
-                    Should read: "When the effects of a <em>Spell</em> event your opponent plays during a conflict would initiate, 
+                    Should read: "When the effects of a <em>Spell</em> event your opponent plays during a conflict would initiate,
 					put this character into play from your hand – cancel its effects."
-                    <br> 
+                    <br>
 					<i>(Added "from your hand.")</i>
                 </p>
 				<h5>
@@ -175,7 +175,7 @@
                 </h5>
                 <p>
                     Should read: “While this character is honored, you may play each character in your provinces as if it were in your hand.”
-                    <br> 
+                    <br>
 					<i>(Removed “reducing its cost by 1.”)</i>
                 </p>
 				<h5>
@@ -183,7 +183,7 @@
                 </h5>
                 <p>
                     Should read: “(to a minimum of 1).”
-                    <br> 
+                    <br>
 					<i>(Replaces “(to a minimum of 0).”)</i>
                 </p>
 				<h5>
@@ -191,7 +191,7 @@
                 </h5>
                 <p>
                     Should read: “Put a facedown holding under your stronghold province into play in an unbroken non-stronghold province...”
-                    <br> 
+                    <br>
 					<i>(Replaces “Put a facedown holding under your stronghold province into an unbroken non-stronghold province...”)</i>
                 </p>
 				<h5>
@@ -199,7 +199,7 @@
                 </h5>
 				<p>
 					Should read: “...move 1 fate from that character to a character you control.”
-					<br> 
+					<br>
 					<i>(Replaces “move each fate from that character to a character you control with no fate.”)</i>
                 </p>
 				<h5>
@@ -207,7 +207,7 @@
                 </h5>
 				<p>
 					Should read: "Attach to a character you control."
-					<br> 
+					<br>
 					<i>(Added "Attach to a character you control.")</i>
                 </p>
                 <h5>
@@ -215,7 +215,7 @@
                 </h5>
 				<p>
 					Should read: “When a duel that targets a character you control would resolve”
-					<br> 
+					<br>
 					<i>(Replaces “When an opponent initiates a duel that targets a character you control”)</i>
                 </p>
             </section>
@@ -306,7 +306,7 @@
       },
     },
     mounted() {
-      this.$store.commit('changeDocumentTitle', 'Rules Reference');
+      this.$store.commit('changeDocumentTitle', 'The Imperial Law');
       defer(this.scroll, this.$route.hash);
     },
   };
