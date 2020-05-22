@@ -8,7 +8,8 @@ class DeckInspector {
     this.format = format;
     this.stronghold = this.findCardByType('stronghold');
     this.clan = this.stronghold ? this.stronghold.clan :
-                    clanProp || null;
+                    clanProp || this.findPrimaryClan();
+    this.splash = this.clan ? this.findSplashClan(this.clan) : null;
     this.role = this.findCardByType('role');
     this.supportingClan = null;
   }
@@ -33,6 +34,18 @@ class DeckInspector {
 
   findCardByType(type) {
     return DeckInspector.findCardByType(this.slots, type);
+  }
+
+  findPrimaryClan() {
+    const dynastyDeck = this.findSlotsBy('side', 'dynasty');
+    const mainClanCard = dynastyDeck.find(slot => slot.card.clan !== 'neutral');
+    return mainClanCard ? mainClanCard.card.clan : null;
+  }
+
+  findSplashClan(primaryClan) {
+    const conflictDeck = this.findSlotsBy('side', 'conflict');
+    const splashClanCard = conflictDeck.find(slot => slot.card.clan !== 'neutral' && slot.card.clan !== primaryClan);
+    return splashClanCard ? splashClanCard.card.clan : null;
   }
 
   findSlotsBy(keyName, key) {

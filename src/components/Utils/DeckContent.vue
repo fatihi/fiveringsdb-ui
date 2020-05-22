@@ -136,7 +136,7 @@
         return this.inspector.findCardByType('stronghold');
       },
       clan() {
-        return this.stronghold ? this.stronghold.clan : null;
+        return this.stronghold ? this.stronghold.clan : this.inspector.clan;
       },
       role() {
         return this.inspector.findCardByType('role');
