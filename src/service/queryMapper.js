@@ -116,6 +116,36 @@ class QueryMapper {
         type: 'boolean',
         description: 'Unique',
       },
+      banned: {
+        name: 'is_banned',
+        type: 'boolean',
+        description: 'Banned in Standard',
+      },
+      b: {
+        name: 'is_banned',
+        type: 'boolean',
+        description: 'Banned in Standard',
+      },
+      bannedSkirmish: {
+        name: 'is_banned_in_skirmish',
+        type: 'boolean',
+        description: 'Banned in Skirmish',
+      },
+      bs: {
+        name: 'is_banned_in_skirmish',
+        type: 'boolean',
+        description: 'Banned in Skirmish',
+      },
+      restricted: {
+        name: 'is_restricted',
+        type: 'boolean',
+        description: 'Restricted in Standard',
+      },
+      r: {
+        name: 'is_restricted',
+        type: 'boolean',
+        description: 'Restricted in Standard',
+      },
       glory: {
         name: 'glory',
         type: 'integer',
