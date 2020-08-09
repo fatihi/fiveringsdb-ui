@@ -337,7 +337,7 @@ class DeckInspector {
   }
 
   static findRoleRestrictedCards(slots) {
-    return slots.filter(slot => slot.card.role_restriction != null).map(slot => slot.card);
+    return slots.filter(slot => slot.card.role_restriction).map(slot => slot.card);
   }
 
   static count(slots) {
