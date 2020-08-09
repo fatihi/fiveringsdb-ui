@@ -147,7 +147,7 @@ export default {
         current: this.getQuantity(record) || 0,
       }))
         .filter(slot => slot.current > 0)
-        .filter(slot => slot.card.role_restriction != null)
+        .filter(slot => slot.card.role_restriction)
         .filter(slot => roleRestrictions.filter(restriction => restriction == slot.card.role_restriction).length == 0);
       return illegalSlots;
     },
