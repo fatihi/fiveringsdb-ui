@@ -99,6 +99,9 @@ export default {
         {
           role_restriction: { isNull: true },
         },
+        {
+          role_restriction: "",
+        }
       ];
 
       if (this.role && this.role.traits) {
