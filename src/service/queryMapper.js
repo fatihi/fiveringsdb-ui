@@ -126,11 +126,6 @@ class QueryMapper {
         type: 'boolean',
         description: 'Banned in Standard, e.g. b:true',
       },
-      bannedSkirmish: {
-        name: 'is_banned_in_skirmish',
-        type: 'boolean',
-        description: 'Banned in Skirmish, e.g. bannedSkirmish:true',
-      },
       bs: {
         name: 'is_banned_in_skirmish',
         type: 'boolean',
@@ -148,7 +143,7 @@ class QueryMapper {
       },
       role: {
         name: 'role_restriction',
-        type: 'id',
+        type: 'string',
         description: 'Restricted By Role, e.g. role:air',
       },
       glory: {
