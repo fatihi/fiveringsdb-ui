@@ -75,7 +75,7 @@ const denormalizeCards = () => {
     // recreate some keys when they have been removed by the serializer
     cardNullableFields.forEach((field) => {
       if (record[field] === undefined) {
-        record[field] = null;
+        record[field] = "";
       }
     });
     // add the list of illustrators
