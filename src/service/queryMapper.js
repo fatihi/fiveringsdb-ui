@@ -109,42 +109,47 @@ class QueryMapper {
       unicity: {
         name: 'unicity',
         type: 'boolean',
-        description: 'Unique',
+        description: 'Unique, e.g. unicity:true',
       },
       u: {
         name: 'unicity',
         type: 'boolean',
-        description: 'Unique',
+        description: 'Unique, e.g. u:true',
       },
       banned: {
         name: 'is_banned',
         type: 'boolean',
-        description: 'Banned in Standard',
+        description: 'Banned in Standard, e.g. banned:true',
       },
       b: {
         name: 'is_banned',
         type: 'boolean',
-        description: 'Banned in Standard',
+        description: 'Banned in Standard, e.g. b:true',
       },
       bannedSkirmish: {
         name: 'is_banned_in_skirmish',
         type: 'boolean',
-        description: 'Banned in Skirmish',
+        description: 'Banned in Skirmish, e.g. bannedSkirmish:true',
       },
       bs: {
         name: 'is_banned_in_skirmish',
         type: 'boolean',
-        description: 'Banned in Skirmish',
+        description: 'Banned in Skirmish, e.g. bs:true',
       },
       restricted: {
         name: 'is_restricted',
         type: 'boolean',
-        description: 'Restricted in Standard',
+        description: 'Restricted in Standard, e.g. restricted:true',
       },
       r: {
         name: 'is_restricted',
         type: 'boolean',
-        description: 'Restricted in Standard',
+        description: 'Restricted in Standard, e.g. r:true',
+      },
+      role: {
+        name: 'role_restriction',
+        type: 'id',
+        description: 'Restricted By Role, e.g. role:air',
       },
       glory: {
         name: 'glory',
