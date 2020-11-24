@@ -50,6 +50,12 @@
 				<li>
 					<a href="https://fiveringsdb.com/card/mirumoto-daisho" target="_blank">Mirumoto Daisho</a> (Children of the Empire, 58)
 				</li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/lost-papers" target="_blank">Lost Papers</a> (Dominion Cycle, 61)
+	            </li>
                 </ul>
             </section>
             <section>
@@ -106,7 +112,13 @@
                 	<a href="https://fiveringsdb.com/card/kakita-toshimoko" target="_blank">Kakita Toshimoko</a> (Children of the Empire, 14)
 	            </li>
         	    <li>
-                	<a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
+                	<a href="https://fiveringsdb.com/card/bayushi-shoju-2" target="_blank">Bayushi Shoju</a> (Inheritance Cycle, 121)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/ikoma-tsanuri-2" target="_blank">Ikoma Tsanuri</a> (Dominion Cycle, 79)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/contested-countryside" target="_blank">Contested Countryside</a> (Dominion Cycle, 106)
 	            </li>
                 </ul>
             </section>
