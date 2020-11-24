@@ -138,7 +138,7 @@
                     <i>(Replaces “<em>Reaction</em>: After this province is revealed...”)</i>
                 </p>
                 <h5>
-                    <a href="https://fiveringsdb.com/card/kuroi-mori target="_blank">Kuroi Mori</a>
+                    <a href="https://fiveringsdb.com/card/kuroi-mori" target="_blank">Kuroi Mori</a>
                     (Core Set, 12)
                 </h5>
                 <p>
