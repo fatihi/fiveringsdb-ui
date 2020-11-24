@@ -50,6 +50,12 @@
 				<li>
 					<a href="https://fiveringsdb.com/card/mirumoto-daisho" target="_blank">Mirumoto Daisho</a> (Children of the Empire, 58)
 				</li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/lost-papers" target="_blank">Lost Papers</a> (Dominion Cycle, 61)
+	            </li>
                 </ul>
             </section>
             <section>
@@ -106,7 +112,13 @@
                 	<a href="https://fiveringsdb.com/card/kakita-toshimoko" target="_blank">Kakita Toshimoko</a> (Children of the Empire, 14)
 	            </li>
         	    <li>
-                	<a href="https://fiveringsdb.com/card/gateway-to-meido" target="_blank">Gateway to Meido</a> (Inheritance Cycle, 3)
+                	<a href="https://fiveringsdb.com/card/bayushi-shoju-2" target="_blank">Bayushi Shoju</a> (Inheritance Cycle, 121)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/ikoma-tsanuri-2" target="_blank">Ikoma Tsanuri</a> (Dominion Cycle, 79)
+	            </li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/contested-countryside" target="_blank">Contested Countryside</a> (Dominion Cycle, 106)
 	            </li>
                 </ul>
             </section>
@@ -217,6 +229,25 @@
 					Should read: “When a duel that targets a character you control would resolve”
 					<br>
 					<i>(Replaces “When an opponent initiates a duel that targets a character you control”)</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/butcher-of-the-fallen" target="_blank">Butcher of the Fallen</a> (Dominion Cycle, 31)
+                </h5>
+                <p>
+                    Should read: “While this character is attacking, characters with
+					less <span class="icon icon-conflict-military"></span> skill than the number of unbroken provinces you control
+					cannot be declared as defenders.”
+
+                    <br><i>(Replaces “While this character is attacking, characters with
+					printed <span class="icon icon-conflict-military"></span> skill X or less cannot be declared as defenders,
+					where X is the number of unbroken provinces you control.”)</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/unbridled-ambition" target="_blank">Unbridled Ambition</a> (Dominion Cycle, 116)
+                </h5>
+                <p>
+                    Should read: “Cannot be a stronghold province.”
+                    <br> <i>(Added “Cannot be a stronghold province.”)</i>
                 </p>
             </section>
         </div>

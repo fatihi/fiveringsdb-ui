@@ -45,6 +45,43 @@
                     play book, the text of the card takes precedence.
                 </p>
             </section>
+			<section>
+                <anchored-heading @heading="add" :level="1">Multiple Formats</anchored-heading>
+                <p>
+                    While the rules presented in the Learn to Play book introduce 
+					the game’s primary stronghold format, there are many other
+					formats that allow Legend of the Five Rings to be played in
+					different unique ways. Currently there are four fully supported
+					formats for the game, each with its own additional rules
+					supplements which can be found online at www.L5R.com.
+                </p>
+				<ul>
+					<li>
+                        The stronghold format is a two-player head-to-head format
+						in which players attempt to break each others’ strongholds.
+                    </li>
+                    <li>
+                        The skirmish format is a two-player head-to-head format in
+						which players attempt to break all three of their opponent’s
+						provinces. No stronghold or province cards are used in this
+						format.
+                    </li>
+                    <li>
+                        The enlightenment format is a three-player head-to-head
+						format in which players attempt to collect all five rings to
+						achieve enlightenment.
+                    </li>
+                    <li>
+                        The team conquest format is a four-player head-to-head
+						format in which two teams attempt to destroy both of the
+						opposing team’s strongholds.
+                    </li>
+				</ul>
+				<p>
+				The rules in this Rules Reference document apply to all formats,
+				unless explicitly stated otherwise.
+				</p>
+            </section>
             <section>
                 <anchored-heading @heading="add" :level="1">Glossary</anchored-heading>
                 <p>
@@ -130,8 +167,7 @@
                         <li>
                             During the dynasty phase, the active player is the player who is permitted to play character
                             cards from his or her provinces or initiate an action ability. The status of active player
-                            alternates between players in this phase until one player passes, after which the remaining
-                            player remains the active player until he or she also passes.
+                            alternates between players in this phase until all players have passed.
                         </li>
                         <li>
                             During the conflict phase, the active player is the player with the opportunity to initiate
@@ -219,10 +255,23 @@
                             character. Such modifiers apply to the character even while the attachment is bowed.
                         </li>
                         <li>
+                            Attachments on a province are not considered to be in that
+							province.
+                        </li>
+                        <li>
                             If a character card is in play as an attachment, the skill values on that
                             character-as-attachment are not treated as skill modifiers (as they lack the "+" or "-"
                             symbol before the value) for the character to which the card is attached.
                         </li>
+						<li>
+							If an attachment has a limit (for example “Limit 1 <em>Battlefield</em>
+							attachment per province”), that indicates that only one
+							instance of a particular subset of cards can be attached to
+							the same card or game element. If a second card of that
+							subset becomes attached to the card or game element, the
+							previously-attached card is discarded as the limit has been
+							surpassed.
+						</li>
                     </ul>
                     <p>
                         For attachment card anatomy, see "<a href="#appendix-ii-card-anatomy">Appendix II: Card
@@ -283,14 +332,15 @@
                     </p>
                     <ul>
                         <li>
-                            Rotate a broken province 180 degrees to indicate it is broken.
+                            Rotate a province card 180 degrees or discard a province
+							token to indicate the province is broken.
                         </li>
                         <li>
                             When a province is broken, the attacking player has the option of discarding any dynasty
                             cards in that province. If this option is taken, the province is refilled facedown.
                         </li>
                         <li>
-                            Ability text on a broken province is not active.
+                            Ability text on a broken province card is not active.
                         </li>
                         <li>
                             Dynasty cards may still be played from broken provinces, and broken provinces still refill
@@ -301,10 +351,22 @@
                             an eligible province against which attacks may be made. If a player's stronghold province is 
                             broken, that player loses the game.
                         </li>
+                        <ul>
+                            <li>
+                                If a player does not have a stronghold province, they
+								lose the game when all of their provinces are broken.
+                            </li>
+                        </ul>
                         <li>
                             If a province breaks for any reason other than through standard conflict resolution, the 
                             opponent of the player who controls that province is considered to have broken the province.
                         </li>
+                        <ul>
+                            <li>
+                                If a player has multiple opponents, each of those players
+								is considered to have broken the province.
+                            </li>
+                        </ul>
                     </ul>
                 </article>
                 <article>
@@ -407,6 +469,14 @@
                             When a player plays a character from his or her hand during a conflict, the player has the
                             option to play it directly into the conflict, ready and participating on his or her side.
                         </li>
+						<li>
+							When a player plays a character in a team conquest format
+							game, that player chooses to either play it under their own
+							control or under the control of a teammate. Once played,
+							control cannot be exchanged except by card effects. Fate
+							is placed on the character from the fate pool of the player
+							playing the character, regardless of which player controls it.
+						</li>
                     </ul>
                     <p>
                         For character card anatomy, see "<a href="#appendix-ii-card-anatomy">Appendix II: Card
@@ -442,6 +512,14 @@
                             its controller's stronghold card, and does not bear a clan symbol that matches the clan
                             symbol on its controller's stronghold card.
                         </li>
+						<ul>
+							<li>
+								If a player does not have a stronghold card, “in-clan”
+								and “out-of-clan” determination is defined by the clan
+								selected during deckbuilding to be that player’s primary
+								clan.
+							</li>
+						</ul>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#deckbuilding">Deckbuilding</a>
@@ -768,7 +846,8 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Deckbuilding</anchored-heading>
                     <p>
-                        To build custom decks for sanctioned tournament play:
+                        To build custom decks for Legend of the Five Rings: The
+						Card Game:
                     </p>
                     <ul>
                         <li>
@@ -814,19 +893,56 @@
                                 provinces.
                             </li>
                         </ul>
+						<li>
+							Any additional deckbuilding restrictions contained in the
+							separate Imperial Law document, based on the format
+							being played, must be followed.
+						</li>
+						<li>
+							The skirmish format follows different deckbuilding rules than
+							each other format. When building decks for the skirmish
+							format, use the following rules instead:
+						</li>
+                        <ul>
+                            <li>
+								Do not include stronghold, role, or province cards.
+                            </li>
+                            <li>
+								A player’s dynasty deck must contain a minimum of 30
+								cards and a maximum of 40 cards. Each of these cards
+								must be in-clan or neutral.
+                            </li>
+                            <li>
+								A player’s conflict deck must contain a minimum of 30
+								cards and a maximum of 40 cards. Each of these cards
+								must be in-clan or neutral, or be purchased from a
+								<b>single</b> other clan by using influence. (Each player has
+								6 influence with which to purchase out-of-clan cards
+								during deckbuilding.)
+                            </li>
+                            <li>
+								No more than 2 copies of a single card by title can be
+								included in any combination in a player’s dynasty and
+								conflict decks.
+                            </li>
+                            <li>
+								For tournament play, each player may include up to 10
+								additional cards in their “sideboard,” which can be used
+								to modify the contents of their decks in between games
+								in a single match. The contents of a players’ decks
+								and sideboard combined must follow all rules outlined
+								above.
+                            </li>
+                        </ul>
                     </ul>
-                    <p>
-                        <b>Note:</b> When constructing a dynasty and conflict deck for out-of-the-box play from one core
-                        set, the minimum size for each deck is 30 cards. To construct decks for two players from a
-                        single core set, use all the cards and influence from the desired clan pairings and divide the
-                        neutrals as in the tutorial game.
-                    </p>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Deck Limits</anchored-heading>
                     <p>
-                        Up to 3 total copies of most cards (by title) may be included in a player's dynasty and/or
-                        conflict decks. Each copy of a card in either deck counts towards this limit.
+                        Up to 3 total copies of most cards (by title) may be included
+						in a player’s dynasty and/or conflict decks (2 copies instead
+						in skirmish format). Each copy of a card in either deck counts
+						towards this limit.
                     </p>
                     <p>
                         If a card has the text "Limit X per deck" no more than X copies of that
@@ -834,11 +950,13 @@
                     </p>
                     <ul>
                         <li>
-                            If X is 2 or lower, this phrase acts as a deckbuilding restriction.
+                            If X is less than the standard number of allowed copies, this
+							phrase acts as a deckbuilding restriction.
                         </li>
                         <li>
-                            If X is 4 or higher, this phrase acts as a permission that enables a player to include more
-                            than the standard 3 copies.
+                            If X is greater than the standard number of allowed copies,
+							this phrase acts as a permission that enables a player to
+							include more than the standard number of copies.
                         </li>
                     </ul>
                 </article>
@@ -1060,6 +1178,17 @@
                             location define when and how the card may be played.
                         </li>
                         <li>
+                            Event cards with action abilities may be played from a
+							player’s hand during any action window.
+                        </li>
+						<ul>
+							<li>
+                            In the skirmish format, event cards with action abilities
+							cannot be played from a player’s hand during the
+							dynasty phase.
+							</li>
+						</ul>
+                        <li>
                             Event cards played from a player’s provinces cannot be played outside of the dynasty phase.
                         </li>
                         <li>
@@ -1091,7 +1220,7 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Facedown Province</anchored-heading>
                     <p>
-                        A facedown province has no inherent identity other than "facedown province." When a facedown
+                        A facedown province card has no inherent identity other than "facedown province." When a facedown
                         province is turned faceup, that province card is considered to be revealed.
                     </p>
                     <ul>
@@ -1114,6 +1243,10 @@
                             exchange positions, such that the facedown province is now out of play and the faceup 
                             province is now in play. The opposite is true when a province is turned facedown.
                         </li>
+						<li>
+							Province tokens in the skirmish format are never considered
+							to be facedown and are never revealed.
+						</li>
                     </ul>
                 </article>
                 <article>
@@ -1149,11 +1282,29 @@
                     </ul>
                 </article>
                 <article>
+                    <anchored-heading @heading="add" :level="2">Fill a Province</anchored-heading>
+                    <p>
+					If a player is instructed to fill a province, that player takes the
+					top card of their dynasty deck and places it facedown (without
+					looking at it) on the province.
+                    </p>
+                    <ul>
+                        <li>
+                            A player can fill a province even if that province already has
+							1 or more dynasty cards in it.
+                        </li>
+                        <li>
+                            If a player is instructed to fill a province faceup, the dynasty
+							card is placed in the province faceup rather than facedown.
+                        </li>
+                    </ul>
+                </article>
+                <article>
                     <anchored-heading @heading="add" :level="2">First Player, First Player Token</anchored-heading>
                     <p>
                         A first player is chosen during setup, and the first player token is used to indicate that
-                        player's status as the first player. The chosen player remains first player until the first
-                        player token passes to the other player.
+                        player's status as the first player. The chosen player remains first player until they pass the first player
+						token to the player on their left during the fate phase.
                     </p>
                     <ul>
                         <li>
@@ -1170,10 +1321,30 @@
                             each appropriate game moment.
                         </li>
                         <li>
-                            For any question as to who should perform an act or make a decision first, in the absence of
-                            any other direction by card or rules text, the first player does so first, followed by the
-                            opponent.
+                            For any question as to who should perform an act or make a
+							decision first, in the absence of any other direction by card
+							or rules text, the first player does so first, followed by the
+							player to the first player’s left and continuing in clockwise
+							order.
                         </li>
+						<li>
+							In the team conquest format, the first player token is given
+							to a team rather than a player. Each player on that team is
+							considered to be the first player. During action windows,
+							each team has an action opportunity (rather than each
+							player). When a team wishes to take an action, one of the
+							players on that team takes the action, then a player on the
+							opposing team has an opportunity to take an action. This
+							continues until both teams pass in sequence, and the action
+							window closes.
+						</li>
+						<ul>
+							<li>
+								At the end of the fate phase, the first player token is
+								passed to the opposing team and they become the firstplayer
+								team.
+							<li>
+						</ul>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#active-player">Active Player</a>, <a href="#setup">Setup</a>, <a
@@ -1281,15 +1452,17 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Glory Count</anchored-heading>
                     <p>
-                        When the players are asked to perform a glory count, each player counts the total glory value among 
-                        the ready characters he or she controls, and adds 1 to the total for each ring in his or her claimed
-                        ring pool. The player with the highest total wins the glory count.
+                        When the players are asked to perform a glory count, each
+						player or each team counts the total glory value among the
+						ready characters they control and adds 1 to the total for each
+						ring in their claimed ring pool. The player or team with the
+						highest total wins the glory count.
                     </p>
                     <ul>
                         <li>
                             <a href="#3-4-1-glory-count">Step 3.4.1</a> of the conflict phase consists of a framework
-                            glory count. The winner of this count claims the Imperial Favor and may set it to either
-                            side.
+                            glory count. The winner of this count claims the Imperial
+							Favor and may set it to either side if appropriate.
                         </li>
                         <ul>
                             <li>
@@ -1367,7 +1540,8 @@
                     </p>
                     <ul>
                         <li>
-                            A player's stronghold indicates that player's starting honor total.
+                            A player's stronghold indicates that player's starting honor
+							total. In the skirmish format, each player starts with 6 honor.
                         </li>
                         <li>
                             Each time a player gains honor, that honor is taken from the general token pool and added to
@@ -1423,7 +1597,7 @@
                     <p>
                         The Imperial Favor represents which player currently holds the favor of the Emperor. <a
                             href="#3-4-1-glory-count">Step 3.4.1</a> of the conflict phase consists of a framework glory
-                        count. The winner of this count claims the Imperial Favor and may set it to either side.
+                        count. The winner of this count claims the Imperial Favor and may set it to either side if appropriate.
                     </p>
                     <ul>
                         <li>
@@ -1457,6 +1631,13 @@
                             If a player is instructed to discard the Imperial Favor, that player returns the Imperial
                             Favor to its unclaimed state in the token bank.
                         </li>
+						<li>
+							In the skirmish format, the Imperial Favor is not set to a
+							side as described above. Instead, the +1 skill modifier
+							granted by the Imperial Favor applies to each conflict in
+							which its bearer controls at least one participating character,
+							regardless of conflict type.
+						</li>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#glory-count">Glory Count</a>
@@ -1499,6 +1680,10 @@
                             If a dynasty card would enter a player’s hand of conflict cards, it is put into its owner’s discard 
                             pile instead.
                         </li>
+						<li>
+							If a conflict card would enter a player’s provinces, it is put
+							into its owner’s conflict discard pile instead.
+						</li>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#enters-play">Enters Play</a>, <a href="#leaves-play">Leaves Play</a>,
@@ -1512,6 +1697,10 @@
                         deck. Many conflict deck cards have an influence cost, which makes them eligible for selection
                         as an out-of-clan card.
                     </p>
+					<p>
+						In the skirmish format, each player cannot spend more than
+						6 influence to include out-of-clan cards in their deck.
+					</p>
                     <ul>
                         <li>
                             A player may spend influence up to the amount indicated by his or her stronghold to include
@@ -1595,14 +1784,18 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">In Player Order</anchored-heading>
                     <p>
-                        If the players are instructed to perform a sequence "in player order," the first player performs
-                        his or her part of the sequence first, followed by the other player.
+                        If the players are instructed to perform a sequence “in player
+						order,” the first player performs their part of the sequence first,
+						followed by the player to the first player’s left and continuing in
+						clockwise order.
                     </p>
                     <ul>
                         <li>
-                            If a sequence performed in player order does not conclude after each player has performed
-                            his or her aspect of the sequence once, the sequence of opportunities continues to alternate
-                            back and forth between the players until it is complete.
+                            If a sequence performed in player order does not conclude
+							after each player has performed their aspect of the
+							sequence once, the sequence of opportunities continues to
+							alternate from player to player in clockwise order until it is
+							complete.
                         </li>
                     </ul>
                 </article>
@@ -1643,6 +1836,12 @@
                             An interrupt with specified limit that enables it to be triggered more than once per round
                             may only be initiated once each time its specified triggering condition occurs.
                         </li>
+                    <ul>
+                        <li>
+                            If multiple players can trigger an interrupt ability, each
+							may do so to the same triggering condition.
+                        </li>
+                    </ul>
                     </ul>
                 </article>
                 <article>
@@ -2005,6 +2204,27 @@
                     </ul>
                 </article>
                 <article>
+                    <anchored-heading @heading="add" :level="2">Opponent</anchored-heading>
+                    <p>
+                        In the stronghold format, as well as most games of the skirmish
+						format, each player has only one opponent.
+                    </p>
+                    <p>
+						In the enlightenment format, where each player has two
+						opponents, a player’s card ability that refers to “your
+						opponent” only refers to the single opponent participating
+						against that player in a conflict. It does not refer to the player
+						not participating in the conflict.
+                    </p>
+                    <p>
+						In the team conquest format, where all players can control
+						participating characters in a conflict, a player’s card ability that
+						refers to “your opponent” or “an opponent” refers to either
+						player on the opposing team, chosen when resolving the card
+						ability.
+                    </p>
+                </article>
+                <article>
                     <anchored-heading @heading="add" :level="2">Ordinary</anchored-heading>
                     <p>
                         See "<a href="#personal-honor-personal-dishonor">Personal Honor, Personal Dishonor</a>".
@@ -2055,6 +2275,30 @@
                             already participating character gains "cannot participate" status during a conflict, move it 
                             home bowed.
                         </li>
+						<li>
+							In the enlightenment format, only two players can control
+							participating characters: one attacking player and one
+							defending player. The third player in the game may take
+							actions to influence the outcome of the conflict, but they
+							cannot play or move characters to the conflict on either side
+							(except as indicated by card effects).
+						</li>
+						<li>
+							In the team conquest format, all four players can control
+							participating characters. Characters controlled by players on
+							the same team participate on the same side of the conflict
+							and contribute their skill towards the same total.
+						</li>
+						<li>
+							If a conflict does not have two participating players, it
+							cannot resolve. Therefore, if a player is eliminated from
+							the game in the middle of a conflict and the game does
+							not end, the conflict immediately ends with no winner.
+							Return the ring to the attacker’s unclaimed ring pool (or the
+							common unclaimed ring pool, as appropriate) and each
+							participating character controlled by the remaining player
+							returns home bowed.
+						</li>
                     </ul>
                 </article>
                 <article>
@@ -2189,6 +2433,67 @@
                     </p>
                 </article>
                 <article>
+                    <anchored-heading @heading="add" :level="2">Player Elimination</anchored-heading>
+                    <p>
+                        In most game formats, players are eliminated from the game
+						when certain conditions are met. Once a player is eliminated
+						from the game, all cards that player owns are immediately
+						removed from the game, and their honor dial is ignored for the
+						purposes of card abilities for the rest of the game. If, after a
+						player is eliminated, only one player remains in the game, that
+						player is the game’s winner.
+                    </p>
+                    <ul>
+						<li>
+							If a player is eliminated from an enlightenment format
+							game, perform the following steps:
+						</li>
+						<ul>
+							<li>
+								Any ring tokens an eliminated player had claimed on
+								their provinces, or that are in the eliminated player’s
+								personal unclaimed ring pool, are placed in the common
+								unclaimed ring pool.
+							</li>
+							<li>
+								If the eliminated player was the first player, the first
+								player token immediately passes to the player on the
+								eliminated player’s left.
+							</li>
+							<li>
+								Any treaties made by the eliminated player are
+								immediately dissolved.
+							</li>
+						</ul>
+						<li>Players are not eliminated from a team conquest format
+						game until their entire team loses. If a player’s stronghold
+						province is broken, they continue to play, with the following
+						penalties:
+						</li>
+						<ul>
+							<li>
+								Treat the printed text box of that player’s stronghold as if
+								it were blank (except for Traits).
+							</li>
+							<li>
+								That player cannot bid more than two during honor bids.
+							</li>
+							<li>
+								That player cannot reshuffle either of their decks if those
+								decks run out of cards.
+							</li>
+							<li>
+								If a player reaches zero honor, their stronghold province
+								is immediately broken.
+							</li>
+							<li>
+								Broken stronghold provinces are immune to all card
+								effects.
+							</li>
+						</ul>
+					</ul>
+                </article>
+                <article>
                     <anchored-heading @heading="add" :level="2">Pride</anchored-heading>
                     <p>
                         Pride is a keyword ability. After a character with the pride keyword wins a conflict, honor that
@@ -2232,21 +2537,28 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Provinces, Province Cards</anchored-heading>
                     <p>
-                        A player's provinces represent the lands surrounding his or her stronghold. When a province is
-                        under attack and turned faceup, the card represents what the enemy finds or encounters upon
-                        first entering that province.
+                        A player’s provinces represent the lands under their domain.
+						When a province is attacked and turned faceup, the card
+						represents what the enemy finds or encounters upon first
+						entering that province.
                     </p>
+					<p>
+						When playing the skirmish format, province tokens are used
+						instead of province cards. These tokens have no game text, no
+						element, and 3 defense strength. They are never considered to
+						be facedown or faceup, and are never revealed.
+					</p>
                     <ul>
                         <li>
                             A face-down province card is considered to be in play only as a face down province, and its
                             faceup side is unable to engage with the game state until the province is revealed.
                         </li>
                         <li>
-                            A non-broken, faceup province is considered to be in play, and is engaged with the game
+                            A non-broken, faceup province card is considered to be in play, and is engaged with the game
                             state.
                         </li>
                         <li>
-                            A broken province is considered to have a blank text box, and its ability cannot be used.
+                            A broken province is considered to have a blank text box, and its abilities cannot be used.
                         </li>
                         <li>
                             If a province has more than one card in it, those cards are considered to all be in the same province. 
@@ -2259,7 +2571,7 @@
                             province is not adjacent to any other province.
                         </li>
                         <li>
-                            Each province has one or more elements associated with it. A province with more than one element 
+                            Each province card has one or more elements associated with it. A province with more than one element 
                             counts as a province of each of its elements at all times and can be selected during deck construction 
                             to fulfill the province slot of any of those elements.
                         </li>
@@ -2267,6 +2579,13 @@
                             A fivefold <i>tomoe</i> symbol used in place of a single element, such as on Toshi Ranbo (Inheritance 
                             Cycle, 1), indicates that all five elements are associated with that province.
                         </li>
+						<li>
+							During a conflict, a province is only
+							considered to be an “eligible” province to be attacked if it
+							is controlled by the defending player. The provinces of any
+							non-defending players are not eligible to be attacked. A
+							player cannot attack their own province.
+						</li>
                     </ul>
                 </article>
                 <article>
@@ -2280,15 +2599,17 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Rally</anchored-heading>
                     <p>
-                        Rally is a keyword ability that appears on dynasty cards. When a card with the rally keyword is 
-                        revealed in a player’s provinces, that player adds the top card of their dynasty deck to the same
-                        province faceup. Both cards are in the province together, and either can be played as an action 
-                        during the dynasty phase. Do not refill a province until it is empty.
+                        Rally is a keyword ability that appears on dynasty cards. When
+						a card with the rally keyword is revealed in a player’s provinces,
+						that player fills the same province faceup. Both cards are in the
+						province together, and either can be played as an action during
+						the dynasty phase. Do not refill a province until it is empty.
                     </p>
                     <ul>
                         <li>
-                            When a province is refilled faceup, or when a card is added to a province faceup, that card is 
-                            not revealed and the rally keyword on it does not trigger.
+                            When a province is filled or refilled faceup, or when a card
+							is added to a province faceup, that card is not revealed and
+							the rally keyword on it does not trigger.
                         </li>
                     </ul>
                 </article>
@@ -2325,6 +2646,12 @@
                         <li>
                             A reaction with a specified limit that enables it to be triggered more than once per round
                             may only be initiated once each time its specified triggering condition occurs.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            If multiple players can trigger a reaction ability, each may
+							do so to the same triggering condition.
                         </li>
                     </ul>
                 </article>
@@ -2399,11 +2726,11 @@
                         </li>
                     </ul>
                     <p>
-                        <b>Related:</b> <a href="#would">"Would"</a>
+                        <b>Related:</b> <a href="#would">Would</a>
                     </p>
                 </article>
                 <article>
-                    <anchored-heading @heading="add" :level="2">"Resolve an Ability"</anchored-heading>
+                    <anchored-heading @heading="add" :level="2">Resolve an Ability</anchored-heading>
                     <p>
                         Some abilities instruct a player to “resolve an ability" or “resolve this ability twice." To resolve 
                         a triggered ability, resolve all text after the bold timing word (action, reaction, or interrupt),
@@ -2417,6 +2744,15 @@
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#initiating-abilities-playing-cards">Initiating Abilities / Playing Cards</a>
+                    </p>
+                </article>
+                <article>
+                    <anchored-heading @heading="add" :level="2">Restore a Province</anchored-heading>
+                    <p>
+                        If a player is instructed to restore a broken province, that
+						province is rotated 180 degrees and its ability text becomes
+						active as the province is no longer considered to be broken. It
+						is not turned facedown.
                     </p>
                 </article>
                 <article>
@@ -2452,7 +2788,7 @@
                             player's hand or deck) from which it is revealed.
                         </li>
                         <li>
-                            When a province is revealed by a card effect, it remains faceup until a card or game effect 
+                            When a province card is revealed by a card effect, it remains faceup until a card or game effect 
                             turns it facedown.
                         </li>
                     </ul>
@@ -2485,6 +2821,11 @@
                         <li>
                             During the fate phase, place 1 fate on each unclaimed ring.
                         </li>
+						<ul>
+							<li>
+								This step is skipped when playing the skirmish format.
+							</li>
+						</ul>
                         <li>
                             When a ring becomes the contested ring in a conflict, move all fate on that ring to the
                             attacking player's fate pool.
@@ -2496,6 +2837,49 @@
                         <li>
                             A card effect that refers to “the [ELEMENT] ring" refers to any ring that has that element.
                         </li>
+						<li>
+							When a player claims a ring in the enlightenment format,
+							that ring is placed on one of that player’s provinces. The
+							ring is considered to be “claimed on that province.”
+							Rings claimed on a player’s provinces do not return to the
+							unclaimed ring pool during the fate phase. They are still
+							considered to be in that player’s claimed ring pool.
+						</li>
+						<ul>
+							<li>
+								A player cannot have multiple rings of the same printed
+								element claimed on their provinces. If they would do
+								so, the duplicate ring is not claimed and is instead
+								returned to the attacking player’s unclaimed ring pool (if
+								contested) or to the defending player’s unclaimed ring
+								pool (if claimed on a broken province).
+							</li>
+							<li>
+								A player cannot claim a ring on their stronghold
+								province unless their stronghold province is eligible to
+								be attacked by their opponents.
+							</li>
+							<li>
+								If a player breaks an opponent’s province during a
+								conflict, they claim each ring that was claimed on that
+								province, distributing those rings among their own
+								provinces if able.
+							</li>
+							<li>
+								When a card effect would cause a ring to move from
+								a player’s claimed ring pool to an unclaimed ring pool
+								or vice-versa, both pools must belong to the same
+								player. During a conflict, card effects can only switch the
+								contested ring with rings in the claimed or unclaimed
+								ring pools of the attacking player.
+							</li>
+						</ul>
+						<li>
+							In the team conquest format, each team has a shared
+							claimed ring pool. For the purposes of card and game
+							effects, a team’s claimed ring pool counts as the claimed
+							ring pool of each player on that team.
+						</li>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#ring-effects">Ring Effects</a>
@@ -2531,6 +2915,23 @@
                             When a player is instructed to resolve multiple ring effects, they resolve each effect 
                             (or pass on that effect) in its entirety before resolving the next ring effect.
                         </li>
+						<li>
+							When playing the skirmish format, the following three rings
+							have the following effects instead:
+						</li>
+						<ul>
+							<li>
+								<b>Air</b>: Take 1 honor from your opponent.
+							</li>
+							<li>
+								<b>Earth</b>: Either draw 1 card from your conflict deck or
+								discard 1 random card from your opponent’s hand.
+							</li>
+							<li>
+								<b>Water</b>: Choose a character in any player’s home area
+								with 1 or fewer fate on it and either ready or bow it.
+							</li>
+						</ul>
                     </ul>
                 </article>
                 <article>
@@ -2541,6 +2942,9 @@
                         or her stronghold while assembling a deck. The role card starts the game next to its owner's
                         stronghold and is revealed along with the stronghold during setup.
                     </p>
+					<p>
+						Role cards are not used in the skirmish format.
+					</p>
                     <ul>
                         <li>
                             Role cards are not considered in play. Their text affects the game state from the
@@ -2559,10 +2963,12 @@
                 <article>
                     <anchored-heading @heading="add" :level="2">Running Out of Cards</anchored-heading>
                     <p>
-                        If a player attempts to replace a card on a province from his or her dynasty deck or draw a card
-                        from his or her conflict deck and no cards remain in the deck, that player loses 5 honor, then
-                        shuffles the corresponding discard pile and places it facedown to form a new dynasty or conflict
-                        deck. That player then continues to replace the dynasty card or draw the conflict card.
+                        If a player attempts to fill or refill one of their provinces or to
+						draw a card from their conflict deck and no cards remain in the
+						deck, that player loses 5 honor, then shuffles the corresponding
+						discard pile and places it facedown to form a new dynasty or
+						conflict deck. That player then continues to (re)fill the province
+						or draw the conflict card.
                     </p>
                 </article>
                 <article>
@@ -2663,6 +3069,14 @@
                             known as the token bank. Place the rings near the token bank. This area is known as the
                             unclaimed ring pool.
                         </li>
+						<ul>
+							<li>
+								In the enlightenment format, instead of placing five rings
+								in a single unclaimed ring pool, each player places five
+								ring tokens (one of each element) in their own personal
+								unclaimed ring pool.
+							</li>
+						</ul>
                         <li>
                             <b>Determine first player</b>. Randomly select a player. That player will be the first
                             player. Place the first player token in front of this player.
@@ -2675,11 +3089,18 @@
                         </li>
                         <li>
                             <b>Place provinces and stronghold</b>. In player order, each player secretly selects one of
-                            their provinces, places it facedown above their dynasty deck, and places their stronghold
+                            their province cards, places it facedown above their dynasty deck, and places their stronghold
                             card on top of it. If a player is using a role card, it is placed next to his or her
                             stronghold during this step. Each player then places their other four provinces facedown
                             between their dynasty and conflict decks, in any order.
                         </li>
+						<ul>
+							<li>
+								In the skirmish format, each player instead places three
+								province tokens between their dynasty and conflict
+								decks.
+							</li>
+						</ul>
                         <li>
                             <b>Fill provinces</b>. Each player places a card from the top of their dynasty deck facedown
                             onto each of their empty non-stronghold provinces. In player order, each player looks at each 
@@ -2695,10 +3116,22 @@
                             <b>Draw starting hand</b>. Each player draws 4 cards from their conflict deck. In player
                             order, each player has one opportunity to mulligan any number of these cards.
                         </li>
+						<ul>
+							<li>
+								In the skirmish format, each player draws and mulligans
+								to 3 cards instead of 4.
+							</li>
+						</ul>
                         <li>
                             <b>Gain starting honor</b>. Each player gains honor tokens equal to the honor value on their
                             stronghold.
                         </li>
+						<ul>
+							<li>
+								In the skirmish format, each player starts the game with
+								6 honor.
+							</li>
+						</ul>
                     </ol>
                     <p>
                         The game is now ready to begin.
@@ -2763,6 +3196,43 @@
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Status Token</anchored-heading>
+					<p>
+						A status token can be placed on a card to alter its status during
+						a game. These include honored status tokens and dishonored
+						status tokens. Each kind of status token has a different effect on
+						the card it is placed on.
+					</p>
+					<li>
+						Honored status tokens are used to indicate a character’s
+						honored status. A character with an honored status token
+						adds its glory to each of its skills. That character’s controller
+						gains 1 honor when that character leaves play.
+					</li>
+					<li>
+						Dishonored status tokens are used to indicate a character’s
+						dishonored status. A character with a dishonored status
+						token subtracts its glory from each of its skills. That
+						character’s controller loses 1 honor when that character
+						leaves play,
+					</li>
+					<li>
+						Dishonored status tokens can be placed on provinces by
+						card abilities. A province with a dishonored status token
+						is treated as if its printed text box were blank (except for
+						Traits) while the token is on that province.
+					</li>
+					<li>
+						A status token cannot be removed from a card unless it is a
+						character whose personal honor is changed (see Personal
+						Honor, Personal Dishonor on page 15) or a card effect
+						specifically moves or removes that status token.
+					</li>
+					<li>
+						If a card effect “moves” or “discards” an honored or
+						dishonored status token from a character, that character has
+						not been honored or dishonored for the purposes of card
+						abilities, even though it loses its honored/dishonored status.
+					</li>
                     <p>
                         See <a href="#personal-honor-personal-dishonor">Personal Honor</a>.
                     </p>
@@ -2773,6 +3243,9 @@
                         A player's stronghold is considered in play. A stronghold card cannot leave play, move from the 
                         stronghold province, be turned facedown, or change control.
                     </p>
+					<p>
+						Stronghold cards are not used in the skirmish format.
+					</p>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Support</anchored-heading>
@@ -2942,6 +3415,90 @@
                     </ul>
                 </article>
                 <article>
+                    <anchored-heading @heading="add" :level="2">Treaties</anchored-heading>
+                    <p>
+						During the course of an enlightenment format game, players
+						may find themselves in situations where a mutually beneficial
+						agreement called a treaty can be made. In addition to setting
+						up the terms of the treaty, both players agree on value to
+						stake on the treaty (by default, an amount of honor). If either
+						player breaks their part of a treaty, that player must suffer
+						consequences based on the value staked on the treaty.
+                    </p>
+                    <p>
+						When two players are setting up a treaty, each of the following
+						parameters must be specified. Those players may discuss and
+						determine these parameters in any order, but each parameter
+						must be agreed upon by both involved players before a treaty
+						can be finalized. The parameters are as follows:
+                    </p>
+                    <p>
+						<b>What is Being Promised by Each Player:</b> When making a
+						promise for a treaty, a player offers something they are going
+						to do, or not do, during the course of the game. This promise
+						must be an action or a decision that a player can take and
+						cannot include an exchange of game components (honor, fate,
+						cards, or claimed rings).
+                    </p>
+                    <p>
+						<b>Duration:</b> When a treaty is established, both involved players
+						must agree to a duration for how long the treaty is going to
+						last. This duration can be of any length, from “immediate”
+						to “the remainder of the game.” Once a treaty’s duration has
+						ended it either is dissolved (if both players have kept their
+						promises), or it is broken (if one player did not do what they
+						promised in the specified timeframe), causing the player that
+						broke the treaty to suffer the consequences.
+                    </p>
+                    <p>
+						<b>Value:</b> Both involved players must agree upon value to stake
+						on the treaty (between 1 and 5). If during the course of play,
+						the treaty between the two players is broken by either player,
+						the player that broke the treaty suffers a penalty based on the
+						value staked on the treaty. By default, this comes in the form
+						of losing that amount of honor, though it may be defined by a
+						treaty card.
+                    </p>
+                    <ul>
+                        <li>
+                            After a treaty has been broken, the players are no longer
+							bound by the promises they made when establishing the
+							treaty.
+                        </li>
+                        <li>
+                            Each player can form a treaty with any number of other
+							players, but each pair of players may only have one treaty
+							active between them at any given time. If a treaty between
+							two players has dissolved, or been broken, a new treaty may
+							be formed between those players.
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <anchored-heading @heading="add" :level="2">Treaty Cards</anchored-heading>
+                    <p>
+						Treaty cards are included in the Clan War expansion and can
+						be used to increase variety when playing the enlightenment
+						format. To use these cards, shuffle them into a treaty deck at
+						the start of the game and set it within reach of all players. These
+						replace the default method of staking honor on treaties.
+                    </p>
+                    <p>
+						Whenever two players agree on a treaty, they place the top
+						card of the treaty deck facedown between them without
+						looking at it and mark the value staked on the treaty. When a
+						player breaks that treaty, they reveal the card and resolve its
+						text. Note that any treaty card that refers to “the player who did
+						not break this treaty” refers only to the single other player with
+						whom the treaty was made.
+                    </p>
+                    <p>
+						After a treaty is broken (and its effects resolved) or fulfilled (and
+						its effects unrevealed), put that treaty card on the bottom of the
+						the treaty deck.
+                    </p>
+                </article>
+                <article>
                     <anchored-heading @heading="add" :level="2">Triggered Abilities</anchored-heading>
                     <p>
                         A boldface timing command followed by a colon indicates that an ability is a triggered ability.
@@ -3064,6 +3621,18 @@
                             unique character from his or her hand or provinces to place 1 fate on an in-play copy of
                             that unique character he or she controls.
                         </li>
+                        <li>
+                            In team games, the rules listed above apply to a team
+							instead of a player (players on the same team may only have
+							a maximum of one instance of each unique card, by title, in
+							play at any time).
+                        </li>
+                        <li>
+                            While two or more players on a team control more than
+							one copy of a unique stronghold, province card, or holding,
+							treat each copy of that card as if its printed text box were
+							blank and as if it had a strength or bonus strength of 0.
+                        </li>
                     </ul>
                     <p>
                         <b>Related:</b> <a href="#duplicates">Duplicates</a>
@@ -3077,10 +3646,18 @@
                     </p>
                     <ul>
                         <li>
-                            Each time the defending player loses an unopposed conflict, that player loses 1 honor. The
-                            lost honor is returned to the general token pool. This occurs during framework 
-                            <a href="#3-2-4-apply-unopposed">step 3.2.4</a>.
+                            Each time the defending player loses an unopposed conflict
+							in the stronghold format, that player loses 1 honor. The lost
+							honor is returned to the general token pool. This occurs
+							during framework <a href="#3-2-4-apply-unopposed">step 3.2.4</a>.
                         </li>
+						<li>
+							In the team conquest format, a conflict is only considered
+							unopposed if no player on the defending team controls any
+							defending characters at the time the attacking team wins
+							the conflict. If that is the case, each player on the defending
+							team loses 1 honor.
+						</li>
                     </ul>
                 </article>
                 <article>
@@ -3119,38 +3696,104 @@
                             be considered to have "lost" a conflict, that character must be participating in the
                             conflict on the losing side at the time the ability resolves.
                         </li>
+						<li>
+							In the team conquest format, players on a team win or
+							lose the conflict as a team, regardless of who controls
+							participating characters. Any card abilities that trigger when
+							a player wins (or loses) a conflict can be triggered if that
+							player wins (or loses) a conflict.
+						</li>
                     </ul>
                 </article>
                 <article>
                     <anchored-heading @heading="add" :level="2">Winning the Game</anchored-heading>
                     <p>
-                        There are three primary paths to victory in the game. The game ends immediately if a player
-                        meets one (or more) of these victory conditions:
+                        In each format there are three primary paths to victory in the game. The game ends immediately if a player
+                        meets one (or more) of these victory conditions.
                     </p>
                     <ul>
                         <li>
-                            The first player to break the province protecting his or her opponent's stronghold wins the
-                            game.
+							If all but a single player has been eliminated from the game,
+							that player is the game’s winner.
                         </li>
                         <li>
-                            If a player's stronghold province is broken, that player loses the game.
+							Some card abilities can introduce additional victory
+							conditions to the game. Such a condition immediately ends
+							the game if it is met.
                         </li>
                         <li>
-                            The first player to meet the condition of having 25 or more honor in his or her honor pool
-                            wins the game.
+							If two or more players would reach a victory condition
+							simultaneously, the first player wins the game if they have
+							reached a victory condition. If they have not, the player
+							closes to the first player’s left who has reached a victory
+							condition wins the game.
                         </li>
-                        <li>
-                            The first player to have 0 honor in his or her honor pool is eliminated from the game,
-                            causing that player's opponent to win.
-                        </li>
-                        <li>
-                            Some card abilities can introduce additional victory conditions to the game. Such a
-                            condition immediately ends the game if it is met.
-                        </li>
-                        <li>
-                            If both players would reach a victory condition simultaneously, the first player wins the
-                            game.
-                        </li>
+						<li>
+							Stronghold format victory conditions:
+						<li>
+						<ul>
+							<li>
+								If a player’s stronghold province is broken, that player is
+								eliminated from the game.
+							</li>
+							<li>
+								The first player to meet the condition of having 25 or
+								more honor in their honor pool wins the game.
+							</li>
+							<li>
+								The first player to have 0 honor in their honor pool is
+								eliminated from the game.
+							</li>
+						</ul>
+						<li>
+							Skirmish format victory conditions:
+						<li>
+						<ul>
+							<li>
+								If all three of a player’s province are broken, that player
+								is eliminated from the game.
+							</li>
+							<li>
+								The first player to meet the condition of having 12 or
+								more honor in their honor pool wins the game.
+							</li>
+							<li>
+								When a player has 0 honor in their honor pool, they are
+								eliminated from the game.
+							</li>
+						</ul>
+						<li>
+							Enlightenment format victory conditions:
+						<li>
+						<ul>
+							<li>
+								The first player to collect all five elemental rings on their
+								provinces wins the game.
+							</li>
+							<li>
+								The first player to meet the condition of having 25 or
+								more honor in their honor pool wins the game.
+							</li>
+							<li>
+								If a player’s stronghold province is broken, or if a player
+								has 0 honor in their honor pool, that player is eliminated
+								from the game.
+							</li>
+						</ul>
+						<li>
+							Team conquest format victory conditions:
+						<li>
+						<ul>
+							<li>
+								If the stronghold province of each member of a single
+								team is broken, that team loses the game and the
+								opposing team wins the game.
+							</li>
+							<li>
+								The first team to meet the condition of having 50 or
+								more honor in their honor pool wins the game.
+							</li>
+						</ul>
                     </ul>
                 </article>
                 <article>
@@ -3209,15 +3852,21 @@
                 </p>
                 <anchored-heading @heading="add" :level="2">Action Windows</anchored-heading>
                 <p>
-                    An action ability may only be triggered during an action window. Action windows are presented in
-                    lighter <b>orange</b> boxes on the chart. When most action windows open, the first player has the
-                    first opportunity to initiate an action, or pass. The one exception to this is the action window
-                    during the conflict phase, in which the defending player has the first opportunity to initiate an
-                    action, or pass. Opportunities to initiate actions alternate between the players in player order
-                    until all players consecutively pass, at which point the action window closes and the game advances
-                    to the next step on the timing chart. Note that if a player passes his or her opportunity to act,
-                    but the other opponent does not consecutively pass in sequence, the original player may still take
-                    an action when the alternation of action opportunities returns to the player who had passed.
+                    An action ability may only be triggered during an action
+					window. Action windows are presented in lighter <b>orange</b> boxes
+					on the chart. When most action windows open, the player
+					or team with the first player token has the first opportunity
+					to initiate an action, or pass. The one exception to this is the
+					action window during the conflict phase, in which the defending
+					player (or team) has the first opportunity to initiate an action,
+					or pass. Opportunities to initiate actions alternate between the
+					players in player order until all players consecutively pass, at
+					which point the action window closes and the game advances
+					to the next step on the timing chart. Note that if a player
+					passes their opportunity to act, but any other opponent does
+					not consecutively pass in sequence, the original player may
+					still take an action when the alternation of action opportunities
+					returns to the player who had passed.
                 </p>
                 <p>
                     Resolve each action completely before the next action opportunity.
@@ -3381,7 +4030,7 @@
                         <td><b>4.3</b> Remove fate from characters.</td>
                     </tr>
                     <tr>
-                        <td><b>4.4</b> Place fate on unclaimed rings.</td>
+                        <td><b>4.4</b> Place fate on unclaimed rings (if applicable).</td>
                     </tr>
                     <tr>
                         <td class="action"><b>&diamond; ACTION WINDOW</b></td>
@@ -3393,7 +4042,7 @@
                         <td><b>4.6</b> Discard from provinces.</td>
                     </tr>
                     <tr>
-                        <td><b>4.7</b> Return rings.</td>
+                        <td><b>4.7</b> Return rings (if applicable).</td>
                     </tr>
                     <tr>
                         <td><b>4.8</b> Pass first player token.</td>
@@ -3423,9 +4072,11 @@
                 </p>
                 <anchored-heading @heading="add" :level="3">1.2. Reveal facedown dynasty cards</anchored-heading>
                 <p>
-                    In player order, each player turns each facedown dynasty card in each of his or her provinces
-                    faceup. A player's cards are turned over one at a time, from the player's leftmost province to his
-                    or her rightmost province.
+                    In player order, each player turns each facedown dynasty card
+					in each of their provinces faceup. A player’s cards are turned
+					over one at a time, from the player’s leftmost province to their
+					rightmost province. If there are any facedown cards in a player’s
+					stronghold province, those cards are turned faceup first.
                 </p>
                 <anchored-heading @heading="add" :level="3">1.3. Collect fate</anchored-heading>
                 <p>
@@ -3433,6 +4084,12 @@
                     incorporating all active fate modifiers. This fate is taken from the general token pool and added to
                     the player's fate pool.
                 </p>
+				<ul>
+					<li>
+						In the enlightenment format, the first player collects 1
+						additional fate during the dynasty phase.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">1.4. Play cards from provinces</anchored-heading>
                 <p>
                     This is a special action window in which the opportunity to act alternates back and forth between
@@ -3494,13 +4151,20 @@
                     Each player secretly selects a number from 1 to 5 on his or her honor dial as his or her honor bid
                     for this round. Once both players have confirmed that they are ready, proceed to the next step.
                 </p>
+				<ul>
+					<li>
+						In the skirmish format, players cannot select a number
+						higher than 3 on their honor dial.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">2.3. Reveal honor dials</anchored-heading>
                 <p>
                     The players simultaneously reveal their bids.
                 </p>
                 <p>
-                    Once a player reveals an honor bid, the dial is placed next to the player's stronghold and remains
-                    as a reference point until the next honor bid occurs.
+                    Once a player reveals an honor bid, the dial is placed next
+					to the player's stronghold or conflict deck and remains as a
+					reference point until the next honor bid occurs.
                 </p>
                 <anchored-heading @heading="add" :level="3">2.4. Transfer honor</anchored-heading>
                 <p>
@@ -3508,10 +4172,59 @@
                     bid that is equal to the difference between the two bids. If the bids are equal, no honor is
                     transferred during this step.
                 </p>
+				<ul>
+					<li>
+						In the enlightenment format, all three players compare their
+						honor bids with one another for the purposes of transferring
+						honor.
+					</li>
+					<ul>
+						<li>
+							If each player selects a different number on their honor
+							dial, the player who selects the highest number gives
+							honor to the player who selects the lowest number.
+							The amount of honor given is equal to the difference
+							between the numbers those two players select. The
+							player whose number is in between the other two does
+							not gain or lose honor.
+						</li>
+						<li>
+							If two players select the same number and the remaining
+							player selects a number that is higher than that selected
+							by their two opponents, the player that selected the
+							higher number gives honor to both opponents. The
+							amount of honor given is equal to the difference
+							between the two numbers selected, divided as evenly
+							as possible between the two players that selected the
+							same number. If any honor remains to be given after
+							dividing the honor as evenly as possible, the player
+							giving the honor selects which opponent the remaining
+							honor is given to.
+						</li>
+						<li>
+							If two players select the same number and the remaining
+							player selects a number that is lower than that selected
+							by their two opponents, the player that selected the
+							lower number takes honor from both opponents. The
+							total amount of honor taken is equal to the difference
+							between the two numbers selected, divided as evenly
+							as possible between the two players that selected the
+							same number. If any honor remains to be taken after
+							dividing it as evenly as possible, the player receiving
+							the honor selects which opponent to take the remaining
+							honor from.
+						</li>
+					</ul>
+					<li>
+						In the team conquest format, each player only compares
+						their honor bid with that of the opponent sitting across from
+						them for the purposes of transferring honor.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">2.5. Draw cards</anchored-heading>
                 <p>
-                    Each player simultaneously draws X cards from his or her conflict deck. For each player, X is equal
-                    to his or her honor bid.
+                    Each player simultaneously draws a number of cards from their
+					conflict deck equal to their honor bid.
                 </p>
                 <anchored-heading @heading="add" :level="3">2.6. Draw phase ends</anchored-heading>
                 <p>
@@ -3527,12 +4240,23 @@
                     (Shares 3.2 with conflict resolution chart.)
                 </p>
                 <p>
-                    During the conflict phase, each player is granted one opportunity to declare a military conflict and
-                    one opportunity to declare a political conflict. These conflict opportunities alternate between
-                    players with remaining conflict opportunities in player order until each player has declared a
-                    conflict or passed on each of his or her conflict opportunities. A player's military and political
-                    conflicts may be declared in either order during the round.
+                    During the conflict phase, each player is granted one or more
+					opportunities to declare a conflict. These conflict opportunities
+					alternate between players with remaining conflict opportunities
+					in player order until each player has declared a conflict or
+					passed on each of their conflict opportunities. In the team
+					conquest format, conflict opportunities are given to each team
+					instead of each player.
                 </p>
+				<p>
+					In the stronghold, enlightenment, and team conquest formats,
+					each player (or team) is granted one opportunity to declare
+					a military conflict and one opportunity to declare a political
+					conflict. A player’s military and political conflicts may be
+					declared in either order during the round. In the skirmish
+					format, each player is granted one opportunity to declare a
+					conflict of either type.
+				</p>
                 <p>
                     When a player has an opportunity to declare a conflict, that player may:
                 </p>
@@ -3555,17 +4279,36 @@
                 </p>
                 <ul>
                     <li>
-                        Declare the type and element of the conflict to be initiated. This is indicated by selecting a
-                        ring from the unclaimed ring pool (this ring is known as the contested ring, and defines the
-                        element of the conflict), and placing it on an opponent's eligible unbroken province (this
-                        indicates which province is being attacked) with either the military side or the political side
-                        faceup (the faceup side of the contested ring defines the type of the conflict).
+                        <p>
+							Declare the type and element of the conflict to be initiated. This is indicated by selecting a
+							ring from the unclaimed ring pool (this ring is known as the contested ring, and defines the
+							element of the conflict), and placing it on an opponent's eligible unbroken province (this
+							indicates which province is being attacked) with either the military side or the political side
+							faceup (the faceup side of the contested ring defines the type of the conflict).
+						</p>
+						<p>
+							A conflict cannot be declared against a player’s stronghold
+							province in the stronghold or enlightenment formats unless
+							at least three of that player’s non-stronghold provinces are
+							broken. A conflict cannot be declared against a player’s
+							stronghold province in the team conquest format unless
+							that player’s team controls at least 3 broken provinces and
+							at least one of that player’s non-stronghold provinces is
+							broken.
+						</p>
+						<p>
+							If a player selects an unclaimed ring with fate on it to become the contested ring, that fate is
+							moved from the ring to the attacking player's fate pool.
+						</p>
                     </li>
+					<ul>
+						<li>
+							In the enlightenment format, a player can only declare
+							a conflict using a ring in their personal unclaimed ring
+							pool or the common unclaimed ring pool.
+						</li>
+					</ul>
                 </ul>
-                <p>
-                    If a player selects an unclaimed ring with fate on it to become the contested ring, that fate is
-                    moved from the ring to the attacking player's fate pool.
-                </p>
                 <ul>
                     <li>
                         Declare which <b>ready</b> characters (under his or her control) are being committed as
@@ -3575,6 +4318,14 @@
                         time in order to initiate a conflict. If any of the attackers have the covert keyword, the
                         targets for covert are chosen at this time.
                     </li>
+					<ul>
+						<li>
+							In the team conquest format, each player on the
+							attacking team may declare attackers in the same
+							conflict, and those characters participate on the same
+							side together.
+						</li>
+					</ul>
                 </ul>
                 <p>
                     Each of the above items are considered to be performed simultaneously. If any of the above cannot be
@@ -3598,6 +4349,15 @@
                     characters under his or her control as defenders. Slide these characters toward the center of the
                     play area, away from the defending player's home area. Declaring "no defenders" is also an option.
                 </p>
+					<ul>
+						<li>
+							In the team conquest format, the controller of the attacked
+							province may declare one or more defenders if they choose,
+							and each other player on their team may declare up to one
+							one defender. Those characters participate on the same
+							side together.
+						</li>
+					</ul>
                 <anchored-heading @heading="add" :level="3">3.2.2. Conflict action window</anchored-heading>
                 <p>
                     This is a special action window in which the defending player (rather than the first player) has the
@@ -3654,11 +4414,22 @@
                     attacking player. If both players count 0 skill, the conflict resolves with no winner, and the ring
                     is returned to the pool of unclaimed rings.
                 </p>
+				<ul>
+					<li>
+						In the team conquest format, players win or lose the
+						conflict as a team, regardless of who controls participating
+						characters. Any card abilities that trigger when a player
+						wins a conflict can be triggered if that player’s team wins a
+						conflict (the same is true for losing a conflict), as each player
+						on that team counts as having won the conflict.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">3.2.4. Apply unopposed</anchored-heading>
                 <p>
                     If the attacking player won the conflict and the defending player controls no defending
-                    characters (in step 3.2.3), the conflict is considered "unopposed." The defending player loses 1
-                    honor and returns it to the general token pool.
+                    characters (in step 3.2.3), the conflict is considered "unopposed." If playing the stronghold or
+					team conquest format, the defending player loses 1 honor and
+					returns it to the general token pool.
                 </p>
                 <p>
                     If the defending player or no player won the conflict, nothing happens during this step.
@@ -3666,12 +4437,14 @@
                 <anchored-heading @heading="add" :level="3">3.2.5. Break province</anchored-heading>
                 <p>
                     If the attacking player won the conflict by an amount equal to or greater than the strength of the
-                    attacked province (in step 3.2.3), the province is broken. Rotate the province 180 degrees to
-                    indicate this.
+                    attacked province (in step 3.2.3), the province is broken. Rotate the province 180 degrees
+					or discard the province token to indicate this.
                 </p>
                 <p>
-                    If the attacking player wins a conflict and breaks a province, he or she may immediately discard any
-                    dynasty card on that province. The card is replaced facedown from its controller's dynasty deck.
+                    If the attacking player wins a conflict and breaks a province,
+					they may immediately discard any dynasty cards on that
+					province. If the province becomes empty this way, the province
+					is refilled facedown as normal.
                 </p>
                 <p>
                     If the defending player or no player won the conflict, nothing happens during this step.
@@ -3699,11 +4472,45 @@
                 <p>
                     If the defending player or no player won the conflict, nothing happens during this step.
                 </p>
+				<ul>
+					<li>
+						When playing the skirmish format, the following three rings
+						have the following effects instead:
+					</li>
+					<ul>
+						<li>
+							[b]Air:[/b] Take 1 honor from your opponent.
+						</li>
+						<li>
+							[b]Earth:[/b] Either draw 1 card from your conflict deck or
+							discard 1 random card from your opponent’s hand.
+						</li>
+						<li>
+							[b]Water[/b]: Choose a character in any player’s home area
+							with 1 or fewer fate on it and either ready or bow it.
+						</li>
+					</ul>
+					<li>
+						In the team conquest format, the Air and Earth ring effects
+						may only be resolved against the opponent whose province
+						is being attacked, and only a single player on the attacking
+						team may receive the ring’s effect.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">3.2.7. Claim ring</anchored-heading>
                 <p>
                     The player who won the conflict (in step 3.2.3) claims the contested ring and adds it to his or her
                     claimed ring pool.
                 </p>
+				<ul>
+					<li>
+						In the enlightenment format, the attacking player claims
+						the ring on one of their eligible provinces if they win the
+						conflict. The defending player does not claim the ring if they
+						win the conflict, and it is returned to the attacking player’s
+						personal unclaimed ring pool.
+					</li>
+				</ul>
                 <p>
                     If no player won the conflict (in step 3.2.3), the ring is returned to the unclaimed ring pool.
                 </p>
@@ -3735,6 +4542,15 @@
                     The players then compare their totals. The player with the higher total wins the glory count. If the
                     totals are tied, neither player wins the glory count.
                 </p>
+				<ul>
+					<li>
+						In the team conquest format, each team adds together the
+						total glory on ready characters they control and adds one
+						for each ring claimed by their team. This total is compared
+						to that of the opposing team, and one of the two teams
+						wins the glory count if the totals are not tied.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">3.4.2. Claim Imperial favor</anchored-heading>
                 <p>
                     The player who won the glory count (in step 3.4.1) claims the Imperial Favor by taking the Imperial
@@ -3774,6 +4590,18 @@
                 <p>
                     Simultaneously place 1 fate from the general token pool on each unclaimed ring.
                 </p>
+				<ul>
+					<li>
+						This framework step is skipped when playing the skirmish
+						format.
+					</li>
+					<li>
+						In the enlightenment format, instead of placing 1 fate on
+						each unclaimed ring, each player chooses 1 ring in an
+						opponent’s unclaimed ring pool and places 1 fate from the
+						general token pool on that ring.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">4.5. Ready cards</anchored-heading>
                 <p>
                     Simultaneously ready each bowed card in play.
@@ -3788,14 +4616,26 @@
                     Each province that becomes empty in this way is refilled with a facedown card from the top of its owner’s 
                     dynasty deck.
                 </p>
+				<ul>
+					<li>
+						In the skirmish format, players do not discard faceup cards
+						in broken provinces unless they choose to do so.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">4.7. Return rings</anchored-heading>
                 <p>
                     Simultaneously return each claimed ring to the unclaimed ring pool.
                 </p>
+				<ul>
+					<li>
+						This framework step is skipped when playing the
+						enlightenment format.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">4.8. Pass first player token</anchored-heading>
                 <p>
-                    The player with the first player token passes it to his or her opponent. That player becomes the
-                    first player.
+                    The player with the first player token passes it to the opponent
+					to their left. That player becomes the first player.
                 </p>
                 <anchored-heading @heading="add" :level="3">4.9. Fate phase ends</anchored-heading>
                 <p>
@@ -3894,13 +4734,20 @@
                     Each player secretly selects a number from 1 to 5 on his or her honor dial as his or her honor bid
                     for this duel. Once both players have confirmed that they are ready, proceed to the next step.
                 </p>
+				<ul>
+					<li>
+						In the skirmish format, players cannot select a number
+						higher than 3 on their honor dial.
+					</li>
+				</ul>
                 <anchored-heading @heading="add" :level="3">D.4. Reveal honor dials</anchored-heading>
                 <p>
                     The players simultaneously reveal their bids.
                 </p>
                 <p>
-                    Once a player reveals an honor bid, the dial is placed next to the player's stronghold and remains
-                    as a reference point until the next honor bid occurs.
+                    Once a player reveals an honor bid, the dial is placed next
+					to the player’s stronghold or conflict deck and remains as a
+					reference point until the next honor bid occurs.
                 </p>
                 <anchored-heading @heading="add" :level="3">D.5. Transfer honor</anchored-heading>
                 <p>
@@ -3926,19 +4773,32 @@
                 <anchored-heading @heading="add" :level="3">D.7. Add honor bid, compare values, and determine result
                 </anchored-heading>
                 <p>
-                    Each player adds their duel honor bid to the statistic value they calculated in step D.6. 
-                    Compare the new totals on each side of the duel to determine the results.
+                    Each player calculates their duel total and compares it with that
+					of their opponent to determine the results.
                 </p>
+				<p>
+					In the stronghold, enlightenment, and team conquest formats,
+					each player adds their duel honor bid to the statistic value they
+					calculated in step D.6 to determine their duel total.
+				</p>
+				<p>
+					In the skirmish format, the player with the higher dueling
+					statistic value calculated in step D.6 adds 1 to their honor bid to
+					determine their duel total. The other player’s duel total is equal
+					to their honor bid and is not increased by the dueling statistic.
+				</p>
                 <ul>
                     <li>
-                        The character with the higher value is the duel’s winner.
+                        The character whose controller has the higher duel total is
+						the duel’s winner.
                     </li>
                     <li>
-                        The character with the lower value is the duel’s loser.
+                        The character whose controller has the lower duel total is
+						the duel’s loser.
                     </li>
                     <li>
-                        If the values are the same, neither character is the duel’s winner and neither character is the 
-                        duel’s loser
+                        If the duel totals are the same, neither character is the duel’s
+						winner and neither character is the duel’s loser.
                     </li>
                 </ul>
                 <anchored-heading @heading="add" :level="3">D.8. Apply duel results</anchored-heading>
@@ -4406,7 +5266,153 @@
                         that character. That character cannot be dishonored if it is ordinary.
                     </li>
                 </ul>
-            </section>
+				<anchored-heading @heading="add" :level="2">Dominion Cycle</anchored-heading>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/seven-stings-keep" target="_blank">Seven Stings Keep</a> (25)
+                </h5>
+                <ul>
+                    <li>
+                        <p>
+							When resolving this stronghold’s ability, the process of
+							declaring a conflict is inverted. The conflict begins with
+							the declaration of defenders, which means the defending
+							characters will be participating in the conflict before the
+							attacking characters are declared (and before there is an
+							attacked province, a conflict type, or a contested ring).
+							Because there is no conflict type when defenders are
+							declared, any character may be declared as a defender.
+							If the conflict type chosen by the attacking player would
+							result in an ineligible defender—for example, because the
+							defender has a dash skill value for the declared conflict
+							type—then that character moves home bowed.
+						</p>
+						<p>
+							When declaring attackers, the attacking player must choose
+							a number of attacking characters equal to the number
+							chosen when paying the cost of Seven Stings Keep’s ability.
+							If a number was chosen greater than the number of eligible
+							attackers, the attacking player must declare the greatest
+							number of possible attackers. This may force the attacking
+							player to select a particular ring or conflict type to make the
+							declaration of the required number of attackers eligible. For
+							example, if a character has a dash <span class="icon icon-conflict-military"></span> skill value and it must
+							be declared to reach the chosen number of attackers, then a
+							<span class="icon icon-conflict-political"></span> conflict must be declared.
+						</p>
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/retire-to-the-brotherhood" target="_blank">Retire to the Brotherhood</a> (28)
+                </h5>
+                <ul>
+                    <li>
+                        If a player reveals their entire deck and does not reveal a
+						number of characters equal to the number of characters
+						they discarded to this province’s effect, they do not reshuffle
+						their discard pile to keep revealing more cards. They only
+						put into play the characters revealed, even though this
+						results in fewer characters entering play than the number of
+						characters that were discarded.
+                    </li>
+                    <li>
+                        If a player reveals multiple copies of a unique character
+						to this province’s effect, or reveals a unique character
+						already in play that they own or control, they do not put
+						the duplicate(s) into play. They do not reveal or put into
+						play any additional characters to make up for the unique
+						characters that could not enter play.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/silent-ones-monastery" target="_blank">Silent Ones Monastery</a> (50)
+                </h5>
+                <ul>
+                    <li>
+                        When a player would gain more than 2 honor per phase due
+						to honor being transferred between players, such as by an
+						honor bid, the Silent Ones Monastery prevents all but 2 of
+						it. The honor is not lost by the player giving honor because
+						it is not gained by the player who would be gaining honor.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/study-the-natural-world" target="_blank">Study the Natural World</a> (68)
+                </h5>
+                <ul>
+                    <li>
+                        The effect of this event adds the element(s) of the attacked
+						province to the contested ring immediately and creates a
+						delayed effect that allows the attacking player to resolve
+						each of the contested ring’s effects if they win the conflict.
+						This delayed effect occurs during step 3.2.3 of conflict
+						resolution, at which point the attacking player may either
+						resolve all of the contested ring’s effects or none of them. It
+						does not replace framework step 3.2.6, when the attacking
+						player may also resolve [b]one[/b] of the contested ring’s effects
+as normal.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/under-siege" target="_blank">Under Siege</a> (89)
+                </h5>
+                <ul>
+                    <li>
+                        If the defending player has no cards in their hand, this card
+						cannot be played.as normal.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/foothills-keep" target="_blank">Foothills Keep</a> (94)
+                </h5>
+                <ul>
+                    <li>
+						When paying the additional cost for attacking a province
+						other than Foothills Keep, fate cannot be spent to the ring
+						selected to be the contested ring as the conflict is declared.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/contested-countryside" target="_blank">Contested Countryside</a> (106)
+                </h5>
+                <ul>
+                    <li>
+					All ability limits are player-specific, so this holding allows the
+					attacking player to trigger the attacked province’s abilities,
+					even if the defending player also triggers those abilities.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/divine-ancestry" target="_blank">Divine Ancestry</a> (110)
+                </h5>
+                <ul>
+                    <li>
+						If you cannot lose honor, you cannot give honor to an
+						opponent (and they cannot take honor from you). Any card
+						effect or framework step that would require the transfer of
+						honor is ignored.
+                    </li>
+                </ul>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/compromised-secrets" target="_blank">Compromised Secrets</a> (135)
+                </h5>
+                <ul>
+                    <li>
+						If the attached character has a forced ability, that ability
+						gains the additional cost of giving the opponent 1 honor.
+						Because the ability is forced, it must be triggered and
+						therefore the costs (giving the opponent 1 honor) must be
+						paid.
+                    </li>
+					<li>
+						If Compromised Secrets and the character it is attached to
+						are both controlled by the same player, the additional cost
+						to trigger the character’s abilities would require a player
+						to give themself 1 honor. Because a player cannot give
+						themself 1 honor, the additional cost cannot be paid, and
+						therefore the abilities cannot be triggered.
+					</li>
+                </ul>
+			</section>
             <section>
                 <anchored-heading @heading="add" :level="1">Appendix IV: Card Errata</anchored-heading>
                 <p>
@@ -4499,7 +5505,7 @@
                 <p>
                     Should read: "Attach to a character you control."
                     <br> <i>(Added "Attach to a character you control.")</i>
-                </p>
+                </p
                 <h5>
                     <a href="https://fiveringsdb.com/card/stay-your-hand" target="_blank">Stay Your Hand</a> (Children of the Empire, 80)
                 </h5>
@@ -4507,7 +5513,26 @@
                     Should read: “When a duel that targets a character you control would resolve"
                     <br> <i>(Replaces “When an opponent initiates a duel that targets a character you control")</i>
                 </p>
-                <anchored-heading @heading="add" :level="2">Reprint Changes</anchored-heading>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/butcher-of-the-fallen" target="_blank">Butcher of the Fallen</a> (Dominion Cycle, 31)
+                </h5>
+                <p>
+                    Should read: “While this character is attacking, characters with
+					less <span class="icon icon-conflict-military"></span> skill than the number of unbroken provinces you control
+					cannot be declared as defenders.”
+
+                    <br><i>(Replaces “While this character is attacking, characters with
+					printed <span class="icon icon-conflict-military"></span> skill X or less cannot be declared as defenders,
+					where X is the number of unbroken provinces you control.”)</i>
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/unbridled-ambition" target="_blank">Unbridled Ambition</a> (Dominion Cycle, 116)
+                </h5>
+                <p>
+                    Should read: “Cannot be a stronghold province.”
+                    <br> <i>(Added “Cannot be a stronghold province.”)</i>
+                </p>
+				<anchored-heading @heading="add" :level="2">Reprint Changes</anchored-heading>
                 <p>
                     The following errata clarifies the interaction between individual card text and the rules in this document, 
                     based on the current card ability templating. These text changes will be reflected in any future printing 
@@ -4608,8 +5633,10 @@
                     <a href="https://fiveringsdb.com/card/pit-trap" target="_blank">Pit Trap</a> (Imperial Cycle, 73)
                 </h5>
                 <p>
-                    Should read: "Attach to a character. Play only on an attacking character." 
-                    <br> <i>(Replaces "Attach to an attacking character.")</i>
+                    Should read: “Play only on an attacking character.
+					Attached character does not ready during the fate phase.”
+					<br><i>(Replaces “Attach to an attacking character.
+					Attached character does not ready during the regroup phase.”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/ride-them-down" target="_blank">Ride Them Down</a> (Imperial
@@ -4707,6 +5734,26 @@
                 <p>
                     Should read: “during each conflict in which one of the chosen rings is contested this phase..."
                     <br> <i>(Added “this phase")</i>
+                </p>            
+                <h5>
+                    <a href="https://fiveringsdb.com/card/spectral-visitation" target="_blank">Spectral Visitation</a> 
+                    (Dominion Cycle, 68)
+                </h5>
+                <p>
+					Should read: “After this province is revealed, discard the top 4
+					cards of your dynasty deck – choose a character in your dynasty
+					discard pile and put that character into play.”
+					<br> <i>(Moved the phrase “choose a character in your dynasty discard
+					pile” from before the dash to after the dash.)</i>
+                </p>       
+                <h5>
+                    <a href="https://fiveringsdb.com/card/study-the-natural-world" target="_blank">Study the Natural World</a> 
+                    (Dominion Cycle, 68)
+                </h5>
+                <p>
+					Should read: “the contested ring gains each of the attacked
+					province’s elements until the end of the conflict.”
+					<br><i>(Added “until the end of the conflict”)</i>
                 </p>
             </section>
         </div>
