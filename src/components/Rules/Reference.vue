@@ -13,7 +13,10 @@
         <div class="contents order-sm-1 col-sm-8 mt-3">
             <h2>RULES REFERENCE</h2>
             <p>
-                Version 15
+                Version 16
+            </p>
+            <p>
+                January 5, 2021
             </p>
             <hr>
             <section>
@@ -5421,6 +5424,14 @@ as normal.
                     applies to. Unless errata for a card appears below, the original English printing of that card and
                     all of its information is considered accurate, and overrides all other printings. This includes
                     translated cards, promotional cards, and printings which may appear in alternate products.
+                </p><h5>
+                    <a href="https://fiveringsdb.com/card/city-of-the-open-hand" target="_blank">City of the Open Hand</a>
+                    (Core Set, 6)
+                </h5>
+                <p>
+                    Should read: “gain 1 honor.”
+                    <br>
+                    <i>(Replaces “take 1 honor from that player.")</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/restoration-of-balance" target="_blank">Restoration of Balance</a> 
@@ -5523,6 +5534,18 @@ as normal.
 
                     <br><i>(Replaces “While this character is attacking, characters with
 					printed <span class="icon icon-conflict-military"></span> skill X or less cannot be declared as defenders,
+					where X is the number of unbroken provinces you control.”)</i>
+                </p>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/stoke-insurrection" target="_blank">Stoke Insurrection</a> (Dominion Cycle, 113)
+                </h5>
+                <p>
+                    Should read: “During a conflict – reveal each facedown card in
+					your opponent’s provinces. Then, put up to 2 characters with
+					total printed cost 6 or lower from their provinces into play...”
+
+                    <br><i>(Replaces “While this character is attacking, characters with
+					printed  skill X or less cannot be declared as defenders,
 					where X is the number of unbroken provinces you control.”)</i>
                 </p>
                 <h5>
@@ -5740,11 +5763,12 @@ as normal.
                     (Dominion Cycle, 68)
                 </h5>
                 <p>
-					Should read: “After this province is revealed, discard the top 4
-					cards of your dynasty deck – choose a character in your dynasty
-					discard pile and put that character into play.”
-					<br> <i>(Moved the phrase “choose a character in your dynasty discard
-					pile” from before the dash to after the dash.)</i>
+					Should read: “After this province is revealed – discard the top
+					4 cards of your dynasty deck. Then, choose a character in your
+					dynasty discard pile and put that character into play.”
+					<br> <i>(Moved the phrase “Discard the top 4 cards of your dynasty
+					deck. Then, discard the choose a character in your dynasty
+					discard pile” from before the dash to after the dash.)</i>
                 </p>       
                 <h5>
                     <a href="https://fiveringsdb.com/card/study-the-natural-world" target="_blank">Study the Natural World</a> 
@@ -5754,6 +5778,18 @@ as normal.
 					Should read: “the contested ring gains each of the attacked
 					province’s elements until the end of the conflict.”
 					<br><i>(Added “until the end of the conflict”)</i>
+                </p>  
+                <h5>
+                    <a href="https://fiveringsdb.com/card/exposed-courtyard" target="_blank">Exposed Courtyard</a> 
+                    (Dominion Cycle, 122)
+                </h5>
+                <p>
+					Should read: “During a <span class="icon icon-conflict-military"></span> conflict – discard the top 2 cards of
+					your conflict deck. Then, choose an event in your discard pile.
+					You may play...”
+					<br><i>(Moved the phrase “Discard the top 2 cards of your conflict
+					deck. Then, choose an event in your conflict discard
+					pile” from before the dash to after the dash.)</i>
                 </p>
             </section>
         </div>

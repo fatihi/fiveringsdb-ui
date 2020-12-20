@@ -12,6 +12,9 @@
         </div>
         <div class="contents order-sm-1 col-sm-8 mt-3">
             <h2>IMPERIAL LAW</h2>
+            <p>
+                January 5, 2021
+            </p>
             <hr>
             <section>
                 <anchored-heading @heading="add" :level="1">Banned List</anchored-heading>
@@ -22,6 +25,12 @@
                 <ul>
 	            <li>
         	        <a href="https://fiveringsdb.com/card/guest-of-honor" target="_blank">Guest of Honor</a> (Core Set, 51)
+	            </li>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/bayushi-liar" target="_blank">Bayushi Liar</a> (Core Set, 95)
+	            </li>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/forged-edict" target="_blank">Forged Edict</a> (Core Set, 184)
 	            </li>
 				<li>
 					<a href="https://fiveringsdb.com/card/spyglass" target="_blank">Spyglass!</a> (Core Set, 193)
@@ -36,6 +45,9 @@
 					<a href="https://fiveringsdb.com/card/karada-district" target="_blank">Karada District</a> (Imperial Cycle, 4)
 				</li>
 				<li>
+					<a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Policy Debate</a> (Imperial Cycle, 40)
+				</li>
+				<li>
 					<a href="https://fiveringsdb.com/card/master-of-gisei-toshi" target="_blank">Master of Gisei Toshi</a> (Imperial Cycle, 88)
 				</li>
 				<li>
@@ -46,6 +58,9 @@
 				</li>
 				<li>
 					<a href="https://fiveringsdb.com/card/hidden-moon-dojo" target="_blank">Hidden Moon Dōjō</a> (Elemental Cycle, 68)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/magistrate-station" target="_blank">Magistrate Station</a> (Elemental Cycle, 102)
 				</li>
 				<li>
 					<a href="https://fiveringsdb.com/card/mirumoto-daisho" target="_blank">Mirumoto Daisho</a> (Children of the Empire, 58)
@@ -59,74 +74,19 @@
                 </ul>
             </section>
             <section>
-                <anchored-heading @heading="add" :level="1">Restricted List</anchored-heading>
-                <p>
-                    When deckbuilding, a player may select one card from the restricted list to include in their decks,
-					and cannot include any other restricted cards in their decks and set of provinces. A player may run
-					as many copies of his or her chosen restricted card in a deck as the regular game rules (or card text) allow
-                </p>
-                <ul>
-        	    <li>
-	                <a href="https://fiveringsdb.com/card/city-of-the-open-hand" target="_blank">City of the Open Hand</a> (Core Set, 6)
-        	    </li>
-	            <li>
-        	        <a href="https://fiveringsdb.com/card/rebuild" target="_blank">Rebuild</a> (Core Set, 136)
-	            </li>
-				<li>
-					<a href="https://fiveringsdb.com/card/mirumoto-s-fury" target="_blank">Mirumoto's Fury</a> (Core Set, 159)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/forged-edict" target="_blank">Forged Edict</a> (Core Set, 184)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/duty" target="_blank">Duty</a> (Underhand of the Emperor, 22)
-				</li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/embrace-the-void" target="_blank">Embrace the Void</a> (Imperial Cycle, 16)
-	            </li>
-				<li>
-					<a href="https://fiveringsdb.com/card/pathfinder-s-blade" target="_blank">Pathfinder's Blade</a> (Imperial Cycle, 31)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/policy-debate" target="_blank">Policy Debate</a> (Imperial Cycle, 40)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/the-imperial-palace" target="_blank">The Imperial Palace</a> (Imperial Cycle, 72)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/consumed-by-five-fires" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/cunning-magistrate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
-				</li>
-				<li>
-					<a href="https://fiveringsdb.com/card/a-fate-worse-than-death" target="_blank">A Fate Worse than Death</a> (Imperial Cycle, 98)
-				</li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/mark-of-shame" target="_blank">Mark of Shame</a> (Elemental Cycle, 97)
-	            </li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/magistrate-station" target="_blank">Magistrate Station</a> (Elemental Cycle, 102)
-	            </li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/kakita-toshimoko" target="_blank">Kakita Toshimoko</a> (Children of the Empire, 14)
-	            </li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/bayushi-shoju-2" target="_blank">Bayushi Shoju</a> (Inheritance Cycle, 121)
-	            </li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/ikoma-tsanuri-2" target="_blank">Ikoma Tsanuri</a> (Dominion Cycle, 79)
-	            </li>
-        	    <li>
-                	<a href="https://fiveringsdb.com/card/contested-countryside" target="_blank">Contested Countryside</a> (Dominion Cycle, 106)
-	            </li>
-                </ul>
-            </section>
-            <section>
                 <anchored-heading @heading="add" :level="1">Card Errata</anchored-heading>
                 <p>
                     This section contains a list of changes to cards that are not reflected on the original printing of those cards.
 					These changes to the cards alter how they are played during the game.
+                </p>
+                <h5>
+                    <a href="https://fiveringsdb.com/card/city-of-the-open-hand" target="_blank">City of the Open Hand</a>
+                    (Core Set, 6)
+                </h5>
+                <p>
+                    Should read: “gain 1 honor.”
+                    <br>
+                    <i>(Replaces “take 1 honor from that player.")</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/restoration-of-balance" target="_blank">Restoration of Balance</a>
@@ -240,6 +200,18 @@
 
                     <br><i>(Replaces “While this character is attacking, characters with
 					printed <span class="icon icon-conflict-military"></span> skill X or less cannot be declared as defenders,
+					where X is the number of unbroken provinces you control.”)</i>
+                </p>
+				<h5>
+                    <a href="https://fiveringsdb.com/card/stoke-insurrection" target="_blank">Stoke Insurrection</a> (Dominion Cycle, 113)
+                </h5>
+                <p>
+                    Should read: “During a conflict – reveal each facedown card in
+					your opponent’s provinces. Then, put up to 2 characters with
+					total printed cost 6 or lower from their provinces into play...”
+
+                    <br><i>(Replaces “While this character is attacking, characters with
+					printed  skill X or less cannot be declared as defenders,
 					where X is the number of unbroken provinces you control.”)</i>
                 </p>
                 <h5>
