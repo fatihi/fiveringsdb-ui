@@ -17,7 +17,7 @@
             </p>
             <hr>
             <section>
-                <anchored-heading @heading="add" :level="1">Banned List</anchored-heading>
+                <anchored-heading @heading="add" :level="1">Stronghold Banned List</anchored-heading>
                 <p>
                     When deckbuilding, a player may not include any copies of a card on the banned list in their decks
 		            and set of provinces.
@@ -74,6 +74,85 @@
                 </ul>
             </section>
             <section>
+                <anchored-heading @heading="add" :level="1">Stronghold Restricted List</anchored-heading>
+                <p>
+                    When deckbuilding for the stronghold format, a player may
+					select one card from the restricted list to include in their decks,
+					and cannot include any other restricted cards in their decks
+					and set of provinces. A player may run as many copies of their
+					chosen restricted card in a deck as the regular game rules (or
+					card text) allow.
+                </p>
+                <ul>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/keeper-initiate" target="_blank">Keeper Initiate</a> (Core Set, 124)
+	            </li>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/rebuild" target="_blank">Rebuild</a> (Core Set, 136)
+	            </li>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/mirumoto-s-fury" target="_blank">Mirumoto's Fury</a> (Core Set, 159)
+	            </li>
+				<li>
+					<a href="https://fiveringsdb.com/card/display-of-power" target="_blank">Display of Power</a> (Core Set, 179)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/duty" target="_blank">Duty</a> (Underhand of the Emperor, 22)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/tactical-ingenuity" target="_blank">Tactical Ingenuity</a> (The Emperor's Legion, 21)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/embrace-the-void" target="_blank">Embrace the Void</a> (Imperial Cycle, 16)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/pathfinder-s-blade" target="_blank">Pathfinder's Blade</a> (Imperial Cycle, 72)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/the-imperial-palace" target="_blank">The Imperial Palace</a> (Imperial Cycle, 72)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/consumed-by-five-fires" target="_blank">Consumed by Five Fires</a> (Imperial Cycle, 96)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/cunning-magistrate" target="_blank">Cunning Magistrate</a> (Imperial Cycle, 97)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/a-fate-worse-than-death" target="_blank">A Fate Worse than Death</a> (Imperial Cycle, 98)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/iron-mine" target="_blank">Iron Mine</a> (Imperial Cycle, 103)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/kuni-laboratory" target="_blank">Kuni Laboratory</a> (Elemental Cycle, 84)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/mark-of-shame" target="_blank">Mark of Shame</a> (Elemental Cycle, 97)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/kakita-toshimoko" target="_blank">Kakita Toshimoko</a> (Children of the Empire, 14)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/bayushi-shoju-2" target="_blank">Bayushi Shoju</a> (Inheritance Cycle, 121)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/common-cause" target="_blank">Common Cause</a> (Clan War, 65)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/ikoma-tsanuri-2" target="_blank">Ikoma Tsanuri</a> (Dominion Cycle, 79)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/contested-countryside" target="_blank">Contested Countryside</a> (Dominion Cycle, 106)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/doji-diplomat" target="_blank">Doji Diplomat</a> (Dominion Cycle, 119)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/bayushi-kachiko-2" target="_blank">Bayushi Kachiko</a> (Dominion Cycle, 124)
+				</li>
+                </ul>
+            </section>
+			<section>
                 <anchored-heading @heading="add" :level="1">Card Errata</anchored-heading>
                 <p>
                     This section contains a list of changes to cards that are not reflected on the original printing of those cards.
@@ -221,6 +300,89 @@
                     Should read: “Cannot be a stronghold province.”
                     <br> <i>(Added “Cannot be a stronghold province.”)</i>
                 </p>
+            </section>			
+            <section>
+                <anchored-heading @heading="add" :level="1">Skirmish Banned List</anchored-heading>
+                <p>
+                    When deckbuilding for the skirmish format, a player may not include any copies of a card on the banned list in their decks.
+                </p>
+                <ul>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/guest-of-honor" target="_blank">Guest of Honor</a> (Core Set, 51)
+	            </li>
+				<li>
+					<a href="https://fiveringsdb.com/card/spyglass" target="_blank">Spyglass!</a> (Core Set, 193)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/charge" target="_blank">Charge!</a> (Core Set, 210)
+				</li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/alibi-artist" target="_blank">Alibi Artist</a> (Underhand of the Emperor, 4)
+        	    </li>
+				<li>
+					<a href="https://fiveringsdb.com/card/karada-district" target="_blank">Karada District</a> (Imperial Cycle, 4)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/windswept-yurt" target="_blank">Windswept Yurt</a> (Imperial Cycle, 11)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/the-imperial-palace" target="_blank">The Imperial Palace</a> (Imperial Cycle, 72)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/way-of-the-chrysanthemum" target="_blank">Way of the Crysanthemum</a> (Imperial Cycle, 80)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/master-of-gisei-toshi" target="_blank">Master of Gisei Toshi</a> (Imperial Cycle, 88)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/kanjo-district" target="_blank">Kanjo District</a> (Imperial Cycle, 108)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/hidden-moon-dojo" target="_blank">Hidden Moon Dōjō</a> (Elemental Cycle, 68)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/mirumoto-daisho" target="_blank">Mirumoto Daisho</a> (Children of the Empire, 58)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/prayers-to-ebisu" target="_blank">Prayers to Ebisu</a> (Children of the Empire, 82)
+				</li>
+        	    <li>
+                	<a href="https://fiveringsdb.com/card/chronicler-of-conquests" target="_blank">Chronicler of Conquests</a> (Dominion Cycle, 35)
+	            </li>
+				<li>
+					<a href="https://fiveringsdb.com/card/lost-papers" target="_blank">Lost Papers</a> (Dominion Cycle, 61)
+				</li>
+                </ul>
+            </section>		
+            <section>
+                <anchored-heading @heading="add" :level="1">Enlightenment Banned List</anchored-heading>
+                <p>
+                    When deckbuilding for the enlightenment multiplayer format, a player may not include any copies of a card on the banned list in their decks
+		            and set of provinces.
+                </p>
+                <ul>
+	            <li>
+        	        <a href="https://fiveringsdb.com/card/display-of-power" target="_blank">Display of Power</a> (Core Set, 179)
+	            </li>
+				<li>
+					<a href="https://fiveringsdb.com/card/togashi-tadakatsu" target="_blank">Togashi Tadakatsu</a> (Disciples of the Void, 15)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/karada-district" target="_blank">Karada District</a> (Imperial Cycle, 4)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/ide-tadaji" target="_blank">Ide Tadaji</a> (Imperial Cycle, 29)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/jurojin-s-curse" target="_blank">Jurojin's Curse</a> (Elemental Cycle, 55)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/roving-michibiku" target="_blank">Roving Michibiku</a> (Elemental Cycle, 118)
+				</li>
+				<li>
+					<a href="https://fiveringsdb.com/card/severed-from-the-stream" target="_blank">Severed From the Stream</a> (Children of the Empire, 67)
+				</li>
+                </ul>
             </section>
         </div>
     </div>
