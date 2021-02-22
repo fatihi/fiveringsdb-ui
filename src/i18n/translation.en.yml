@@ -2,6 +2,7 @@ format:
     standard: 'Standard Format'
     single-core: 'Single-Core Format'
     skirmish: 'Skirmish Format'
+    jade-edict: 'Jade Edict Format'
 
 problem:
     0: This deck is valid.

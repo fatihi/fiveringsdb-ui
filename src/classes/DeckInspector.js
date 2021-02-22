@@ -297,12 +297,25 @@ class DeckInspector {
       return 0;
     }
 
-    if (find(this.slots, slot => slot.card != null && slot.card.is_banned)) {
-      return 20;
+    if (this.format === 'jade-edict') {
+      if (find(this.slots, slot => slot.card != null && slot.card.is_banned_in_jade)) {
+        return 20;
+      }
+
+      if (this.slots.filter(slot => slot.card != null && slot.card.is_restricted_in_jade).length > 1) {
+        return 21;
+      }
     }
 
-    if (this.slots.filter(slot => slot.card != null && slot.card.is_restricted).length > 1) {
-      return 21;
+    if (this.format === 'standard') {
+      if (find(this.slots, slot => slot.card != null && slot.card.is_banned)) {
+        return 20;
+      }
+
+      if (this.slots.filter(slot => slot.card != null && slot.card.is_restricted).length > 1) {
+        return 21;
+      }
+
     }
 
     return 0;

@@ -74,6 +74,7 @@
         .map(clan => ({ value: clan, text: this.$t(`clan.${clan}`) }));
       const formatOptions = [
         {value: 'standard', text: this.$t(`format.standard`)},
+        {value: 'jade-edict', text: this.$t(`format.jade-edict`)},
         {value: 'skirmish', text: this.$t(`format.skirmish`)},
         {value: 'single-core', text: this.$t(`format.single-core`)},
       ];
