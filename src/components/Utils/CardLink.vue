@@ -4,7 +4,7 @@
           @click.prevent="showModal">
           <span>{{ card.name }}</span>
         </a>
-        <template v-if="format !== 'skirmish'">
+        <template v-if="format !== 'skirmish' && format !== 'single-core' && format !== 'jade-edict'">
           <span v-if="card.is_banned" :id="'banned_standard_' + card.id" class="fa fa-ban" style="color:red"></span>
           <b-popover v-if="card.is_banned" :target="'banned_standard_'+card.id" triggers="hover" placement="top">
               This card is on the Standard Format Banned List.
@@ -14,8 +14,18 @@
               This card is on the Standard Format Restricted List.
           </b-popover>
         </template>
-        <template v-if="format !== 'standard' && format !== 'single-core'">
-          <span v-if="card.is_banned_in_skirmish" :id="'banned_skirmish_' + card.id" class="fa fa-ban" style="color:green"></span>
+        <template v-if="format !== 'skirmish' && format !== 'single-core' && format !== 'standard'">
+          <span v-if="card.is_banned_in_jade" :id="'banned_jade_' + card.id" class="fa fa-ban" style="color:green"></span>
+          <b-popover v-if="card.is_banned_in_jade" :target="'banned_jade_'+card.id" triggers="hover" placement="top">
+              This card is on the Jade Edict Banned List.
+          </b-popover>
+          <span v-if="card.is_restricted_in_jade" :id="'restricted_jade_' + card.id" class="fa fa-exclamation-triangle" style="color:green"></span>
+          <b-popover v-if="card.is_restricted_in_jade" :target="'restricted_jade_'+card.id" triggers="hover" placement="top">
+              This card is on the Jade Edict Restricted List.
+          </b-popover>
+        </template>
+        <template v-if="format !== 'standard' && format !== 'single-core' && format !== 'jade-edict'">
+          <span v-if="card.is_banned_in_skirmish" :id="'banned_skirmish_' + card.id" class="fa fa-ban" style="color:blue"></span>
           <b-popover v-if="card.is_banned_in_skirmish" :target="'banned_skirmish_'+card.id" triggers="hover" placement="top">
               This card is on the Skirmish Format Banned List.
           </b-popover>

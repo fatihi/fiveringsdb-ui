@@ -78,7 +78,7 @@
       UtilsVersionHistory,
     },
     data() {
-      const formats = ['single-core', 'standard', 'skirmish'];
+      const formats = ['single-core', 'standard', 'skirmish', 'jade-edict'];
       return {
         formatOptions: formats.map(format => ({ value: format, text: this.$t(`format.${format}`) })),
         loading: false,
