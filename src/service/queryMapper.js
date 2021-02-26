@@ -131,6 +131,11 @@ class QueryMapper {
         type: 'boolean',
         description: 'Banned in Skirmish, e.g. bs:true',
       },
+      bje: {
+        name: 'is_banned_in_jade',
+        type: 'boolean',
+        description: 'Banned in Jade Edict, e.g. bje:true',
+      },
       restricted: {
         name: 'is_restricted',
         type: 'boolean',
@@ -140,6 +145,11 @@ class QueryMapper {
         name: 'is_restricted',
         type: 'boolean',
         description: 'Restricted in Standard, e.g. r:true',
+      },
+      rje: {
+        name: 'is_restricted_in_jade',
+        type: 'boolean',
+        description: 'Restricted in Jade Edict, e.g. rje:true',
       },
       role: {
         name: 'role_restriction',
