@@ -19,6 +19,7 @@
                        @click.prevent="click(strain)"
                        class="list-group-item list-group-item-action">
                         <h5>{{ strain.head ? strain.head.name : $t('msg.empty_strain') }}</h5>
+                        <div class="small text-secondary">{{ $t('format.'+strain.format) }}</div>
                         <div class="small text-secondary">{{ strain.created_at | formatDate }}</div>
                     </a>
                 </div>
