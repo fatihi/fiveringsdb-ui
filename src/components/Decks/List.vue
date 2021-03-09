@@ -133,6 +133,7 @@
           { text: 'Since ever', value: null },
         ],
         formatOptions: [
+          { text: '', value: null },
           { text: 'Standard Format', value: 'standard'},
           { text: 'Jade Edict Format', value: 'jade-edict'},
           { text: 'Skirmish Format', value: 'skirmish'},
