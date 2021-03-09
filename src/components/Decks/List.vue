@@ -156,7 +156,7 @@
             primaryClan: null,
             secondaryClan: null,
             cards: [],
-            format: 'standard',
+            format: null,
           };
         } else {
           this.form = null;
