@@ -48,7 +48,14 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-md-8">
+                                <div class="form-group col-md-4">
+                                    <label for="formatInput">Deck Format</label>
+                                    <b-form-select id="formatInput"
+                                                   :options="formatOptions"
+                                                   v-model="form.format"
+                                    ></b-form-select>
+                                </div>
+                                <div class="form-group col-md-4">
                                     <label for="cardInput">Cards included</label>
                                     <multiselect
                                             v-model="form.cards"
@@ -71,7 +78,6 @@
                                     <b-button type="submit" variant="primary" :block="true">Submit</b-button>
                                 </div>
                             </div>
-
                         </form>
                     </b-card>
                 </b-collapse>
@@ -126,6 +132,12 @@
           { text: 'Last 30 days', value: 30 },
           { text: 'Since ever', value: null },
         ],
+        formatOptions: [
+          { text: 'Standard Format', value: 'standard'},
+          { text: 'Jade Edict Format', value: 'jade-edict'},
+          { text: 'Skirmish Format', value: 'skirmish'},
+          { text: 'Single-Core Format', value: 'single-core'},
+        ],
         clanOptions,
         cardOptions,
       };
@@ -144,6 +156,7 @@
             primaryClan: null,
             secondaryClan: null,
             cards: [],
+            format: 'standard',
           };
         } else {
           this.form = null;
@@ -165,6 +178,9 @@
           }
           if (this.form.cards.length > 0) {
             search.cards = this.form.cards.map(item => item.value);
+          }
+          if (this.form.format !== null) {
+            search.format = this.form.format;
           }
         } else {
           search.sort = this.sort;
