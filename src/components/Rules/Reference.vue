@@ -4,7 +4,7 @@
             <b-btn v-b-toggle.toc variant="primary" class="d-sm-none">Table of Contents</b-btn>
             <b-collapse id="toc" class="mt-2 d-sm-block">
                 <ul>
-                    <li v-for="heading in headings" :class="['item-size-'+heading.level]">
+                    <li v-for="heading in headings" :key="heading" :class="['item-size-'+heading.level]">
                         <a :href="heading.href">{{ heading.text }}</a>
                     </li>
                 </ul>
@@ -5492,7 +5492,7 @@ as normal.
                 </h5>
                 <p>
                     Should read: “(to a minimum of 1).”
-                    <br> (Replaces “(to a minimum of 0).”)</i>
+                    <br> <i>(Replaces “(to a minimum of 0).”)</i>
                 </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/kaiu-shihobu" target="_blank">Kaiu Shihobu</a> (Defenders of Rokugan, 10)
@@ -5516,7 +5516,7 @@ as normal.
                 <p>
                     Should read: "Attach to a character you control."
                     <br> <i>(Added "Attach to a character you control.")</i>
-                </p
+                </p>
                 <h5>
                     <a href="https://fiveringsdb.com/card/stay-your-hand" target="_blank">Stay Your Hand</a> (Children of the Empire, 80)
                 </h5>
