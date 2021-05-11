@@ -66,6 +66,10 @@ body {
     background-image: url('/static/svg/clan/unicorn.svg');
 }
 
+.bg-clan-icon.clan-shadowlands {
+    background-image: url('/static/svg/clan/shadowlands.svg');
+}
+
 .text-smallcaps {
     font-variant: small-caps;
 }

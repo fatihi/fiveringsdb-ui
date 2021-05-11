@@ -172,6 +172,7 @@ export default {
       const clans = stores
         .cards()
         .distinct("clan")
+        .filter(clanId => clanId != 'shadowlands')
         .map(clanId => ({ id: clanId, name: this.$t(`clan.${clanId}`) }));
       const part = partition(clans, item => item.id === "neutral");
       return sortBy(part[1], "name").concat(part[0]);
