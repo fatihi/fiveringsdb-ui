@@ -9,7 +9,7 @@ class TypeIcons {
       role: 'asterisk',
       stronghold: 'university',
       treaty: 'gavel',
-      warlord: 'crown',
+      warlord: 'flag',
     };
   }
 
