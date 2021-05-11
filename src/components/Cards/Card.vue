@@ -55,6 +55,14 @@
                 <span>Fate: {{ card.fate }}.</span>
                 <span>Influence: {{ card.influence_pool }}.</span>
             </p>
+            <p v-if="card.type === 'warlord'">
+                <span>Fate: {{ card.fate }}.</span>
+                <span v-if="card.military === undefined"><span class="strike-through">Military</span>.</span>
+                <span v-else>Military: {{ card.military }}.</span>
+                <span v-if="card.political === undefined"><span class="strike-through">Political</span>.</span>
+                <span v-else>Political: {{ card.political }}.</span>
+                <span>Glory: {{ card.glory }}.</span>
+            </p>
             <p v-if="card.type === 'event'">
                 <span v-if="card.cost === undefined"><span class="strike-through">Cost</span>.</span>
                 <span v-else>Cost: {{ card.cost }}.</span>

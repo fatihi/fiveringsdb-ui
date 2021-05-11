@@ -30,6 +30,10 @@
     color: rgb(100, 100, 100);
 }
 
+.fg-dark-shadowlands {
+    color: rgb(0, 0, 0);
+}
+
 .bg-dark-crab {
     background-color: rgb(0, 28, 148);
 }
@@ -60,6 +64,10 @@
 
 .bg-dark-neutral {
     background-color: rgb(100, 100, 100);
+}
+
+.bg-dark-shadowlands {
+    background-color: rgb(0, 0, 0);
 }
 
 .bd-dark-crab {
@@ -94,6 +102,10 @@
     border-color: rgb(100, 100, 100);
 }
 
+.bd-dark-shadowlands {
+    border-color: rgb(0, 0, 0);
+}
+
 .link-crab a:not(.btn) {
     color: rgb(0, 28, 148);
 }
@@ -126,6 +138,10 @@
     color: rgb(100, 100, 100);
 }
 
+.link-shadowlands a:not(.btn) {
+    color: rgb(0, 0, 0);
+}
+
 .fg-medium-crab {
     color: #7f8dc9;
 }
@@ -156,6 +172,10 @@
 
 .fg-medium-neutral {
     color: #b1b1b1;
+}
+
+.fg-medium-shadowlands {
+    color: #000000;
 }
 
 .bg-medium-crab {
@@ -220,4 +240,8 @@
 
 .bd-medium-neutral {
     border-color: #b1b1b1;
+}
+
+.bd-medium-shadowlands {
+    border-color: #000000;
 }
